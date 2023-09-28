@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     public bool playerOne; // this might not be necessary with proper control input
+    private bool doubleJumped;
 
     // Start is called before the first frame update
     void Start()
@@ -24,11 +25,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (playerOne)
         {
-            horizontalMovement = Input.GetAxis("Horizontal1");
+            horizontalMovement = Input.GetAxis("Horizontal"); // Axis set to use wasd
         }
         else
         {
-            horizontalMovement = Input.GetAxis("Horizontal2");
+            horizontalMovement = Input.GetAxis("Horizontal2"); // Axis set to use arrow keys
         }
         MovePlayer();
         //Debug.Log("Gameobject " + gameObject.name + " is grounded = " + IsGrounded());
@@ -40,18 +41,39 @@ public class PlayerMovement : MonoBehaviour
 
         if (playerOne)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+            if (Input.GetKeyDown(KeyCode.W) && IsGrounded()) // player one jump
             {
+                doubleJumped = false;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                
+            }
+            else if (Input.GetKeyDown(KeyCode.W) && !IsGrounded() && !doubleJumped)
+            {
+                doubleJumped = true;
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded())
+            if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded()) // player two jump
             {
-                rb.velocity = new Vector2(rb.velocity.y, jumpForce);
+                doubleJumped = false;
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
+            else if (Input.GetKeyDown(KeyCode.UpArrow) && !IsGrounded() && !doubleJumped)
+            {
+                doubleJumped = true;
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            }
+        }
+
+        // Flip player
+        if (horizontalMovement > 0) 
+        {
+            gameObject.transform.localScale = new Vector2(1, 1);
+        }
+        else if (horizontalMovement < 0)
+        {
+            gameObject.transform.localScale = new Vector2(-1, 1);
         }
     }
 
