@@ -12,10 +12,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     public bool playerOne; // this might not be necessary with proper control input
     private bool doubleJumped;
+    [SerializeField] private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
@@ -43,11 +45,13 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W) && IsGrounded()) // player one jump
             {
+                animator.SetTrigger("Jumping");
                 doubleJumped = false;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
             else if (Input.GetKeyDown(KeyCode.W) && !IsGrounded() && !doubleJumped)
             {
+                animator.SetTrigger("Jumping");
                 doubleJumped = true;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
@@ -56,11 +60,13 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded()) // player two jump
             {
+                animator.SetTrigger("Jumping");
                 doubleJumped = false;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow) && !IsGrounded() && !doubleJumped)
             {
+                animator.SetTrigger("Jumping");
                 doubleJumped = true;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
@@ -74,6 +80,11 @@ public class PlayerMovement : MonoBehaviour
         else if (horizontalMovement < 0)
         {
             gameObject.transform.localScale = new Vector2(-1, 1);
+        }
+
+        if (rb.velocity.y < 0)
+        {
+            animator.SetBool("Falling", true);
         }
     }
 

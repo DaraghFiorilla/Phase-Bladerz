@@ -15,10 +15,12 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private float attackCooldown = 0.5f;
     private bool canAttack = true;
     [SerializeField] private Slider healthSlider;
+    [SerializeField] private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         healthSlider.maxValue = maxHealth;
         playerHealth = maxHealth;
         healthSlider.value = playerHealth;
@@ -49,6 +51,7 @@ public class PlayerCombat : MonoBehaviour
 
     IEnumerator Attack(float cooldownSeconds)
     {
+        animator.SetTrigger("Attacking");
         canAttack = false;
         areaDisplay.enabled = true;
         attackArea.enabled = true;
