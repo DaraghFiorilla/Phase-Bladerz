@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    public bool playerOne; // this might not be necessary with proper control input
 
     // Start is called before the first frame update
     void Start()
@@ -21,17 +22,36 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalMovement = Input.GetAxis("Horizontal");
+        if (playerOne)
+        {
+            horizontalMovement = Input.GetAxis("Horizontal1");
+        }
+        else
+        {
+            horizontalMovement = Input.GetAxis("Horizontal2");
+        }
         MovePlayer();
+        //Debug.Log("Gameobject " + gameObject.name + " is grounded = " + IsGrounded());
     }
 
     void MovePlayer()
     {
         rb.velocity = new Vector2(horizontalMovement * speed, rb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded()) // Input for controller needed here
+        if (playerOne)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded())
+            {
+                rb.velocity = new Vector2(rb.velocity.y, jumpForce);
+            }
         }
     }
 

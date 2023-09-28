@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4859195827483654643}
   - component: {fileID: 4859195827483654646}
   - component: {fileID: 4859195827483654647}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -153,6 +153,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  playerOne: 0
 --- !u!1 &4859195827878376613
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4859195827878376614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
