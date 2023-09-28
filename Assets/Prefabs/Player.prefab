@@ -58,6 +58,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   playerOne: 0
+  animator: {fileID: 0}
 --- !u!114 &6149855807177973479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +75,7 @@ MonoBehaviour:
   attackAreaObject: {fileID: 5851985672654259879}
   attackCooldown: 0.3
   healthSlider: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!212 &4859195827483654644
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -45,13 +45,13 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W) && IsGrounded()) // player one jump
             {
-                animator.SetTrigger("Jumping");
+                animator.SetTrigger("jumping");
                 doubleJumped = false;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
             else if (Input.GetKeyDown(KeyCode.W) && !IsGrounded() && !doubleJumped)
             {
-                animator.SetTrigger("Jumping");
+                animator.SetTrigger("jumping");
                 doubleJumped = true;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
@@ -60,13 +60,13 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded()) // player two jump
             {
-                animator.SetTrigger("Jumping");
+                animator.SetTrigger("jumping");
                 doubleJumped = false;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow) && !IsGrounded() && !doubleJumped)
             {
-                animator.SetTrigger("Jumping");
+                animator.SetTrigger("jumping");
                 doubleJumped = true;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
@@ -84,7 +84,20 @@ public class PlayerMovement : MonoBehaviour
 
         if (rb.velocity.y < 0)
         {
-            animator.SetBool("Falling", true);
+            animator.SetBool("falling", true);
+        }
+        else if (rb.velocity.y == 0)
+        {
+            animator.SetBool("falling", false);
+        }
+
+        if (rb.velocity.x != 0)
+        {
+            animator.SetBool("running", true);
+        }
+        else
+        {
+            animator.SetBool("running", false);
         }
     }
 

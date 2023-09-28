@@ -51,7 +51,7 @@ public class PlayerCombat : MonoBehaviour
 
     IEnumerator Attack(float cooldownSeconds)
     {
-        animator.SetTrigger("Attacking");
+        animator.SetTrigger("attacking");
         canAttack = false;
         areaDisplay.enabled = true;
         attackArea.enabled = true;
