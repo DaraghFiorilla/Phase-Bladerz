@@ -82,11 +82,11 @@ public class PlayerMovement : MonoBehaviour
             gameObject.transform.localScale = new Vector2(-1, 1);
         }
 
-        if (rb.velocity.y < 0)
+        if (rb.velocity.y < 0 && !IsGrounded())
         {
             animator.SetBool("falling", true);
         }
-        else if (rb.velocity.y == 0)
+        else if (rb.velocity.y == 0 && IsGrounded())
         {
             animator.SetBool("falling", false);
         }
