@@ -55,12 +55,12 @@ public class PlayerCombat : MonoBehaviour
         canAttack = false;
         areaDisplay.enabled = true;
         attackArea.enabled = true;
-        Debug.Log(attackArea.enabled);
+        //Debug.Log(attackArea.enabled);
         yield return new WaitForSeconds(cooldownSeconds);
         areaDisplay.enabled = false;
         attackArea.enabled = false;
         canAttack = true;
-        Debug.Log("Can attack");
+        //Debug.Log("Can attack");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
