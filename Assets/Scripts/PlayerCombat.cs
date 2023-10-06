@@ -17,6 +17,14 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Animator animator;
 
+    public enum WeaponType
+    {
+        Katana,
+        Boomerang,
+        Axe,
+        Scythe
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -79,5 +87,10 @@ public class PlayerCombat : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+
+    public void SetWeapon(WeaponType weaponType)
+    {
+
     }
 }
