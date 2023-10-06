@@ -1485,13 +1485,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4859195827483654643, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859195827483654643, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859195827483654644, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0dfbc02c025083e41a4889304a3b9d8d, type: 3}
     - target: {fileID: 4859195827483654644, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: m_Color.b
-      value: 0.2688679
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4859195827483654644, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: m_Color.g
-      value: 0.41037735
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4859195827483654644, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: m_Color.r

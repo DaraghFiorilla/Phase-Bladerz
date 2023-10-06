@@ -13,9 +13,13 @@ public class PlayerCombat : MonoBehaviour
     private SpriteRenderer areaDisplay;
     private PlayerMovement playerMovement;
     [SerializeField] private float attackCooldown = 0.5f;
+    [SerializeField] private int attackPower;
     private bool canAttack = true;
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Animator animator;
+    public bool weaponEquipped;
+    [SerializeField] private int maxWeaponCharge;
+    private int weaponCharge;
 
     public enum WeaponType
     {
@@ -55,6 +59,10 @@ public class PlayerCombat : MonoBehaviour
                 StartCoroutine(Attack(attackCooldown));
             }
         }
+        if (weaponEquipped && weaponCharge == 0)
+        {
+            RemoveWeapon();
+        }
     }
 
     IEnumerator Attack(float cooldownSeconds)
@@ -75,7 +83,11 @@ public class PlayerCombat : MonoBehaviour
     {
         if (other.CompareTag("Damaging"))
         {
-            DamagePlayer(10);
+            DamagePlayer(attackPower);
+            if (other.GetComponentInParent<PlayerCombat>().weaponCharge != 0)
+            {
+                other.GetComponentInParent<PlayerCombat>().weaponCharge--;
+            }
         }
     }
 
@@ -91,6 +103,44 @@ public class PlayerCombat : MonoBehaviour
 
     public void SetWeapon(WeaponType weaponType)
     {
+        weaponCharge = maxWeaponCharge;
+        weaponEquipped = true;
+        Debug.Log(weaponType);
 
+        switch (weaponType)
+        {
+            case WeaponType.Katana:
+                {
+                    attackPower = 8;
+                    attackCooldown = 0.7f;
+                    break;
+                }
+            case WeaponType.Boomerang:
+                {
+                    attackPower = 6;
+                    attackCooldown = 1f;
+                    break;
+                }
+            case WeaponType.Axe:
+                {
+                    attackPower = 10;
+                    attackCooldown = 1f;
+                    break;
+                }
+            case WeaponType.Scythe:
+                {
+                    attackPower = 7;
+                    attackCooldown = 0.6f;
+                    break;
+                }
+        }
+    }
+
+    private void RemoveWeapon()
+    {
+        weaponEquipped = false;
+        weaponCharge = 0;
+        attackPower = 4;
+        attackCooldown = 0.4f;
     }
 }

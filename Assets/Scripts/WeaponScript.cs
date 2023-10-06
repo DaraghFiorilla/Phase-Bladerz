@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.U2D.Animation;
 using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
 {
     private SpawnWeapon weaponManager;
-    private WeaponScriptType weaponScriptType;
+    [SerializeField] private WeaponScriptType weaponScriptType;
     private bool playerInTrigger;
     private GameObject playerObject;
     private PlayerCombat playerCombat;
+    [Tooltip("Add sprites in order: Katana, Boomerang, Axe, Scythe")]public Sprite[] spriteList = new Sprite[4];
+    private SpriteRenderer spriteRenderer;
 
     private enum WeaponScriptType
     {
@@ -22,6 +26,8 @@ public class WeaponScript : MonoBehaviour
     void Start()
     {
         weaponManager = FindObjectOfType<SpawnWeapon>();
+        spriteRenderer = transform.parent.gameObject.GetComponent<SpriteRenderer>();
+        GetRandomWeaponType();
     }
 
     // Update is called once per frame
@@ -29,10 +35,10 @@ public class WeaponScript : MonoBehaviour
     {
         if (playerInTrigger)
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift) && playerObject.name == "Player 1" || Input.GetKeyDown(KeyCode.RightControl) && playerObject.name == "Player 2")
+            if (Input.GetKeyDown(KeyCode.LeftShift) && playerObject.name == "Player 1" && !playerCombat.weaponEquipped|| Input.GetKeyDown(KeyCode.RightControl) && playerObject.name == "Player 2" && !playerCombat.weaponEquipped)
             {
                 Debug.Log("Weapon triggered");
-                Destroy(gameObject.transform.parent.gameObject);
+                //Destroy(gameObject.transform.parent.gameObject);
                 weaponManager.activeWeaponCount--;
                 switch (weaponScriptType)
                 {
@@ -61,18 +67,65 @@ public class WeaponScript : MonoBehaviour
                             // PANIC
                             break;
                         }
+
                 }
+
+                Destroy(gameObject.transform.parent.gameObject);
             }
         }
+    }
+
+    private void GetRandomWeaponType()
+    {
+        int randomInt = Random.Range(1, 4);
+        Debug.Log(randomInt);
+        switch (randomInt)
+        {
+            case 1:
+                {
+                    weaponScriptType = WeaponScriptType.Katana;
+                    Debug.Log("sprite assigning");
+                    spriteRenderer.sprite = spriteList[0];
+                    break;
+                }
+            case 2:
+                {
+                    weaponScriptType = WeaponScriptType.Boomerang;
+                    spriteRenderer.sprite = spriteList[1];
+                    Debug.Log("sprite assigning");
+                    break;
+                }
+            case 3:
+                {
+                    weaponScriptType = WeaponScriptType.Axe;
+                    spriteRenderer.sprite = spriteList[2];
+                    Debug.Log("sprite assigning");
+                    break;
+                }
+            case 4:
+                {
+                    weaponScriptType = WeaponScriptType.Scythe;
+                    spriteRenderer.sprite = spriteList[3];
+                    Debug.Log("sprite assigning");
+                    break;
+                }
+            default:
+                {
+                    // PANIC
+                    Debug.Log(this.name + " script is returning default in randomInt switch");
+                    break;
+                }
+        }
+        //weaponScriptType
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            playerInTrigger = true;
             playerObject = other.gameObject;
             playerCombat = other.GetComponent<PlayerCombat>();
+            playerInTrigger = true;
         }
         Debug.Log("GameObject " + other.name + " has entered trigger of " + gameObject.name);
     }
@@ -83,5 +136,4 @@ public class WeaponScript : MonoBehaviour
         playerObject = null;
         playerCombat = null;
     }
-
 }

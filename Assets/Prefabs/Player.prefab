@@ -74,8 +74,10 @@ MonoBehaviour:
   playerHealth: 100
   attackAreaObject: {fileID: 5851985672654259879}
   attackCooldown: 0.3
+  attackPower: 0
   healthSlider: {fileID: 0}
   animator: {fileID: 0}
+  maxWeaponCharge: 3
 --- !u!212 &4859195827483654644
 SpriteRenderer:
   m_ObjectHideFlags: 0

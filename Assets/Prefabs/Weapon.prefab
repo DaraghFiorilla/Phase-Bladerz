@@ -125,6 +125,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1bbfae128d7ae3419c21094a090c345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponScriptType: 0
+  spriteList:
+  - {fileID: 21300000, guid: 7cc4ea0c8acc62b43988129c0ce9ee3b, type: 3}
+  - {fileID: 21300000, guid: 0d53ea41f531e3c409f97573af206664, type: 3}
+  - {fileID: 21300000, guid: b12d5c8f0af589345874469c07f6773e, type: 3}
+  - {fileID: 21300000, guid: 199b7f8a8d260b04486701176c84a92e, type: 3}
 --- !u!50 &3453368735445737900
 Rigidbody2D:
   serializedVersion: 4
@@ -222,8 +228,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 0608bcc73fe12f84baaa8c4e2345a669, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
