@@ -2695,6 +2695,18 @@ PrefabInstance:
       value: Player 1
       objectReference: {fileID: 0}
     - target: {fileID: 4859195827483654644, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859195827483654644, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859195827483654644, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f51687c0d068e0e428d78b4008db7f5e, type: 3}
+    - target: {fileID: 4859195827483654644, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -2704,6 +2716,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4859195827483654644, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859195827483654644, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4859195827483654645, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
