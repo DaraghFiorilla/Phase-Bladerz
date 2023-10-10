@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WalkMiku
+  m_Name: MikuRun
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,19 +21,19 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: -1879610331, guid: 298dec31d2f178a4f901cfce68ace238, type: 3}
-    - time: 0.083333336
+    - time: 0.1
       value: {fileID: 480562790, guid: 298dec31d2f178a4f901cfce68ace238, type: 3}
-    - time: 0.16666667
+    - time: 0.18333334
       value: {fileID: 1531158945, guid: 298dec31d2f178a4f901cfce68ace238, type: 3}
-    - time: 0.25
+    - time: 0.28333333
       value: {fileID: 1835728718, guid: 298dec31d2f178a4f901cfce68ace238, type: 3}
-    - time: 0.33333334
+    - time: 0.38333333
       value: {fileID: 140802217, guid: 298dec31d2f178a4f901cfce68ace238, type: 3}
-    - time: 0.41666666
+    - time: 0.48333332
       value: {fileID: -1856291133, guid: 298dec31d2f178a4f901cfce68ace238, type: 3}
-    - time: 0.5
+    - time: 0.56666666
       value: {fileID: 1365326933, guid: 298dec31d2f178a4f901cfce68ace238, type: 3}
-    - time: 0.5833333
+    - time: 0.6666667
       value: {fileID: -360524216, guid: 298dec31d2f178a4f901cfce68ace238, type: 3}
     attribute: m_Sprite
     path: 
@@ -67,7 +67,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.59999996
+    m_StopTime: 0.68333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
