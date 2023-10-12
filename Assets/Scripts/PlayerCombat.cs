@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 //using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.UI;
+using static PlayerCombat;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -20,6 +22,11 @@ public class PlayerCombat : MonoBehaviour
     public bool weaponEquipped;
     [SerializeField] private int maxWeaponCharge;
     private int weaponCharge;
+    [SerializeField] private float knockbackStrength;
+    private Rigidbody2D rb;
+    private GameObject knockbackAttacker;
+    private bool knockingback;
+    [SerializeField] private TextMeshProUGUI weaponText;
 
     public enum WeaponType
     {
@@ -40,6 +47,10 @@ public class PlayerCombat : MonoBehaviour
         areaDisplay = attackAreaObject.GetComponent<SpriteRenderer>();
         playerMovement = gameObject.GetComponent<PlayerMovement>();
         attackArea.enabled = false;
+        attackPower = 4;
+        attackCooldown = 0.5f;
+        weaponText.text = "Active weapon =  NONE";
+        rb = gameObject.GetComponentInParent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -65,13 +76,23 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (knockingback)
+        {
+            Vector2 knockbackDirection = (gameObject.transform.position - knockbackAttacker.transform.position).normalized;
+            rb.AddForce(knockbackDirection * knockbackStrength, ForceMode2D.Impulse);
+            knockingback = false;
+        }
+    }
+
     IEnumerator Attack(float cooldownSeconds)
     {
         animator.SetTrigger("attacking");
         canAttack = false;
         areaDisplay.enabled = true;
         attackArea.enabled = true;
-        //Debug.Log(attackArea.enabled);
+        Debug.Log(attackArea.enabled);
         yield return new WaitForSeconds(cooldownSeconds);
         areaDisplay.enabled = false;
         attackArea.enabled = false;
@@ -83,7 +104,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (other.CompareTag("Damaging"))
         {
-            DamagePlayer(attackPower);
+            DamagePlayer(attackPower, other.transform.parent.gameObject);
             if (other.GetComponentInParent<PlayerCombat>().weaponCharge != 0)
             {
                 other.GetComponentInParent<PlayerCombat>().weaponCharge--;
@@ -91,7 +112,7 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    public void DamagePlayer(int damage)
+    public void DamagePlayer(int damage, GameObject sender)
     {
         playerHealth -= damage;
         healthSlider.value = playerHealth;
@@ -99,6 +120,11 @@ public class PlayerCombat : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+
+        knockbackAttacker = sender;
+        knockingback = true;
+        //Vector2 knockbackDirection = (gameObject.transform.position - sender.transform.position).normalized;
+        //rb.AddForce(knockbackDirection * knockbackStrength, ForceMode2D.Impulse);
     }
 
     public void SetWeapon(WeaponType weaponType)
@@ -133,7 +159,16 @@ public class PlayerCombat : MonoBehaviour
                     attackCooldown = 0.6f;
                     break;
                 }
+
+            default:
+                {
+                    attackPower = 4;
+                    attackCooldown = 0.5f;
+                    break;
+                }
+
         }
+        weaponText.text = "Active weapon =  " + weaponType.ToString().ToUpper();
     }
 
     private void RemoveWeapon()
@@ -142,5 +177,6 @@ public class PlayerCombat : MonoBehaviour
         weaponCharge = 0;
         attackPower = 4;
         attackCooldown = 0.4f;
+        weaponText.text = "Active weapon =  NONE";
     }
 }

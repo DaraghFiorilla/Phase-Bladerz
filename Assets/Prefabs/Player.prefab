@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4859195827483654645}
   - component: {fileID: 4859195827483654647}
   - component: {fileID: 6149855807177973479}
+  - component: {fileID: 1871449321585827047}
   - component: {fileID: 4859195827483654644}
   - component: {fileID: 6964748601669333094}
   - component: {fileID: 4859195827483654643}
@@ -77,7 +78,24 @@ MonoBehaviour:
   attackPower: 0
   healthSlider: {fileID: 0}
   animator: {fileID: 0}
+  weaponEquipped: 0
   maxWeaponCharge: 3
+  knockbackStrength: 30
+--- !u!114 &1871449321585827047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4859195827483654642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cdb00d6abd99b1429ec6f9a2ff1ce51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkInterval: 5
+  checkDistance: 5
+  lavaPrefab: {fileID: 0}
 --- !u!212 &4859195827483654644
 SpriteRenderer:
   m_ObjectHideFlags: 0
