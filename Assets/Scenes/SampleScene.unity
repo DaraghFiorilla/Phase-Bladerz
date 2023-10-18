@@ -3443,6 +3443,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4859195827483654647, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859195827483654647, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: playerOne
       value: 1
       objectReference: {fileID: 0}
@@ -3474,6 +3478,10 @@ PrefabInstance:
       propertyPath: movement
       value: 
       objectReference: {fileID: -5848428783668438112, guid: 08b8ac6aa611d6644850b9e2cb7a2a0a, type: 3}
+    - target: {fileID: 6982664302770443205, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6982664302770443205, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: inputActionMap.m_Id
       value: a88093c1-edc7-487a-9eca-7da91a9ede60

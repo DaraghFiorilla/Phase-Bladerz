@@ -68,6 +68,8 @@ public class PlayerMovementV2 : MonoBehaviour
             jumped = false;
         }
     }
+
+
     
     public void OnMove(InputAction.CallbackContext context) // CALLED WHENEVER PLAYER MOVES
     {
