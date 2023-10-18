@@ -10,7 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4859195827483654645}
   - component: {fileID: 4859195827483654647}
+  - component: {fileID: 6982664302770443205}
+  - component: {fileID: 1444052268716717839}
   - component: {fileID: 6149855807177973479}
+  - component: {fileID: 4179705348621997218}
   - component: {fileID: 1871449321585827047}
   - component: {fileID: 4859195827483654644}
   - component: {fileID: 6964748601669333094}
@@ -47,7 +50,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4859195827483654642}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b05b606ba6fe1447a12fd2c9a188cac, type: 3}
   m_Name: 
@@ -60,7 +63,9 @@ MonoBehaviour:
     m_Bits: 64
   playerOne: 0
   animator: {fileID: 0}
---- !u!114 &6149855807177973479
+  movement: {fileID: 0}
+  jump: {fileID: 0}
+--- !u!114 &6982664302770443205
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,18 +74,94 @@ MonoBehaviour:
   m_GameObject: {fileID: 4859195827483654642}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a1e35d3f41587438af2d100dab9eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 5
+  acceleration: 50
+  deacceleration: 100
+  jumpForce: 5
+  groundCheck: {fileID: 4859195827878376614}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  animator: {fileID: 0}
+  movement: {fileID: 0}
+  jump: {fileID: 0}
+--- !u!114 &1444052268716717839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4859195827483654642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: 0}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &6149855807177973479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4859195827483654642}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 198888816de99704c908a038863b9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 100
+  healthSlider: {fileID: 0}
   attackAreaObject: {fileID: 5851985672654259879}
   attackCooldown: 0.3
   attackPower: 0
-  healthSlider: {fileID: 0}
-  animator: {fileID: 0}
+  knockbackStrength: 30
   weaponEquipped: 0
   maxWeaponCharge: 3
-  knockbackStrength: 30
+  weaponText: {fileID: 0}
+  animator: {fileID: 0}
+--- !u!114 &4179705348621997218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4859195827483654642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 028f0a2faa2c9b741831f30f9df10435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 100
+  healthSlider: {fileID: 0}
+  attackCooldown: 0.5
+  attackPower: 0
+  knockbackStrength: 5
+  weaponEquipped: 0
+  maxWeaponCharge: 3
+  weaponText: {fileID: 0}
+  animator: {fileID: 0}
+  attack: {fileID: 0}
 --- !u!114 &1871449321585827047
 MonoBehaviour:
   m_ObjectHideFlags: 0

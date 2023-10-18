@@ -10,7 +10,7 @@ public class WeaponScript : MonoBehaviour
     [SerializeField] private WeaponScriptType weaponScriptType;
     private bool playerInTrigger;
     private GameObject playerObject;
-    private PlayerCombat playerCombat;
+    private PlayerCombatV2 playerCombat;
     [Tooltip("Add sprites in order: Katana, Boomerang, Axe, Scythe")]public Sprite[] spriteList = new Sprite[4];
     private SpriteRenderer spriteRenderer;
 
@@ -31,53 +31,58 @@ public class WeaponScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if (playerInTrigger)
         {
             if (Input.GetKeyDown(KeyCode.LeftShift) && playerObject.name == "Player 1" && !playerCombat.weaponEquipped|| Input.GetKeyDown(KeyCode.RightControl) && playerObject.name == "Player 2" && !playerCombat.weaponEquipped)
-            {
-                Debug.Log("Weapon triggered");
-                //Destroy(gameObject.transform.parent.gameObject);
-                weaponManager.activeWeaponCount--;
-                switch (weaponScriptType)
-                {
-                    case WeaponScriptType.Katana:
-                        {
-                            playerCombat.SetWeapon(PlayerCombat.WeaponType.Katana);
-                            break;
-                        }
-                    case WeaponScriptType.Boomerang:
-                        {
-                            playerCombat.SetWeapon(PlayerCombat.WeaponType.Boomerang);
-                            break;
-                        }
-                    case WeaponScriptType.Axe:
-                        {
-                            playerCombat.SetWeapon(PlayerCombat.WeaponType.Axe);
-                            break;
-                        }
-                    case WeaponScriptType.Scythe:
-                        {
-                            playerCombat.SetWeapon(PlayerCombat.WeaponType.Scythe);
-                            break;
-                        }
-                    default:
-                        {
-                            // PANIC
-                            break;
-                        }
-
-                }
-
-                Destroy(gameObject.transform.parent.gameObject);
+            { // PROBLEM AREA ^ USING OLD INPUT SYSTEM
+               
             }
         }
+    }*/
+
+    public void EquipWeapon()
+    {
+        Debug.Log("Weapon triggered");
+        //Destroy(gameObject.transform.parent.gameObject);
+        weaponManager.activeWeaponCount--;
+        switch (weaponScriptType)
+        {
+            case WeaponScriptType.Katana:
+                {
+                    playerCombat.SetWeapon(PlayerCombatV2.WeaponType.Katana);
+                    break;
+                }
+            case WeaponScriptType.Boomerang:
+                {
+                    playerCombat.SetWeapon(PlayerCombatV2.WeaponType.Boomerang);
+                    break;
+                }
+            case WeaponScriptType.Axe:
+                {
+                    playerCombat.SetWeapon(PlayerCombatV2.WeaponType.Axe);
+                    break;
+                }
+            case WeaponScriptType.Scythe:
+                {
+                    playerCombat.SetWeapon(PlayerCombatV2.WeaponType.Scythe);
+                    break;
+                }
+            default:
+                {
+                    // PANIC
+                    break;
+                }
+
+        }
+
+        Destroy(gameObject.transform.parent.gameObject);
     }
 
     private void GetRandomWeaponType()
     {
-        int randomInt = Random.Range(1, 4);
+        int randomInt = Random.Range(1, 5);
         Debug.Log(randomInt);
         switch (randomInt)
         {
@@ -124,14 +129,18 @@ public class WeaponScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerObject = other.gameObject;
-            playerCombat = other.GetComponent<PlayerCombat>();
+            playerCombat = other.GetComponent<PlayerCombatV2>();
             playerInTrigger = true;
+            playerCombat.isInWeaponTrigger = true;
+            playerCombat.weapon = gameObject;
         }
         Debug.Log("GameObject " + other.name + " has entered trigger of " + gameObject.name);
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        playerCombat.isInWeaponTrigger = false;
+        playerCombat.weapon = null;
         playerInTrigger = false;
         playerObject = null;
         playerCombat = null;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public bool playerOne; // this might not be necessary with proper control input
     private bool doubleJumped;
     [SerializeField] private Animator animator;
+    [SerializeField] private InputActionReference movement, jump;
 
     // Start is called before the first frame update
     void Start()
@@ -33,25 +35,26 @@ public class PlayerMovement : MonoBehaviour
         {
             horizontalMovement = Input.GetAxis("Horizontal2"); // Axis set to use arrow keys
         }
-        MovePlayer();
+        //MovePlayer();
         //Debug.Log("Gameobject " + gameObject.name + " is grounded = " + IsGrounded());
     }
 
     void MovePlayer()
     {
         rb.velocity = new Vector2(horizontalMovement * speed, rb.velocity.y);
+        animator.SetFloat("speed", Mathf.Abs(horizontalMovement));
 
         if (playerOne)
         {
             if (Input.GetKeyDown(KeyCode.W) && IsGrounded()) // player one jump
             {
-                animator.SetTrigger("jumping");
+                //animator.SetTrigger("jumping");
                 doubleJumped = false;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
             else if (Input.GetKeyDown(KeyCode.W) && !IsGrounded() && !doubleJumped)
             {
-                animator.SetTrigger("jumping");
+                //animator.SetTrigger("jumping");
                 doubleJumped = true;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
@@ -60,13 +63,13 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded()) // player two jump
             {
-                animator.SetTrigger("jumping");
+                //animator.SetTrigger("jumping");
                 doubleJumped = false;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow) && !IsGrounded() && !doubleJumped)
             {
-                animator.SetTrigger("jumping");
+                //animator.SetTrigger("jumping");
                 doubleJumped = true;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
@@ -84,22 +87,22 @@ public class PlayerMovement : MonoBehaviour
 
         if (rb.velocity.y < 0 && !IsGrounded())
         {
-            animator.SetBool("falling", true);
+            //animator.SetBool("falling", true);
         }
         else if (rb.velocity.y == 0 && IsGrounded())
         {
-            animator.SetBool("falling", false);
+            //animator.SetBool("falling", false);
         }
 
-        if (rb.velocity.x != 0)
+        /*if (rb.velocity.x != 0)
         {
             animator.SetBool("running", true);
         }
         else
         {
             animator.SetBool("running", false);
-        }
-    }
+        }*/
+    } // OLD INPUT SYSTEM
 
     private bool IsGrounded() // Returns true if the player's groundcheck is touching ground
     {

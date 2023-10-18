@@ -8,25 +8,32 @@ using static PlayerCombat;
 
 public class PlayerCombat : MonoBehaviour
 {
+    [Header("Health Variables:")]
     private int maxHealth = 100;
     public int playerHealth;
+    [SerializeField] private Slider healthSlider;
+
+    [Header("Attack Variables:")]
     [SerializeField]private GameObject attackAreaObject;
     private Collider2D attackArea;
     private SpriteRenderer areaDisplay;
-    private PlayerMovement playerMovement;
     [SerializeField] private float attackCooldown = 0.5f;
     [SerializeField] private int attackPower;
     private bool canAttack = true;
-    [SerializeField] private Slider healthSlider;
-    [SerializeField] private Animator animator;
+    [SerializeField] private float knockbackStrength;
+    private GameObject knockbackAttacker;
+    private bool knockingback;
+
+    [Header("Weapon Variables:")]
     public bool weaponEquipped;
     [SerializeField] private int maxWeaponCharge;
     private int weaponCharge;
-    [SerializeField] private float knockbackStrength;
-    private Rigidbody2D rb;
-    private GameObject knockbackAttacker;
-    private bool knockingback;
     [SerializeField] private TextMeshProUGUI weaponText;
+
+    [Header("Other:")]
+    private Rigidbody2D rb;
+    private PlayerMovement playerMovement;
+    [SerializeField] private Animator animator;
 
     public enum WeaponType
     {
@@ -60,14 +67,14 @@ public class PlayerCombat : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.LeftShift) && canAttack)
             {
-                StartCoroutine(Attack(attackCooldown));
+                //StartCoroutine(Attack(attackCooldown));
             }
         }
         else
         {
             if (Input.GetKeyDown(KeyCode.RightControl) && canAttack)
             {
-                StartCoroutine(Attack(attackCooldown));
+                //StartCoroutine(Attack(attackCooldown));
             }
         }
         if (weaponEquipped && weaponCharge == 0)
@@ -86,7 +93,12 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    IEnumerator Attack(float cooldownSeconds)
+    public void Attack()
+    {
+        animator.SetTrigger("attack");
+    }
+
+    /*IEnumerator Attack(float cooldownSeconds)
     {
         animator.SetTrigger("attacking");
         canAttack = false;
@@ -98,7 +110,7 @@ public class PlayerCombat : MonoBehaviour
         attackArea.enabled = false;
         canAttack = true;
         //Debug.Log("Can attack");
-    }
+    }*/
 
     private void OnTriggerEnter2D(Collider2D other)
     {
