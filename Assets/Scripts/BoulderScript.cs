@@ -7,7 +7,7 @@ public class BoulderScript : MonoBehaviour
 {
     [SerializeField] private float boulderSpeed;
     [SerializeField] private int boulderDamage;
-    private PlayerCombat playerCombat;
+    private PlayerCombatV2 playerCombat;
 
     // Start is called before the first frame update
     void Start()
@@ -30,8 +30,8 @@ public class BoulderScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            playerCombat = other.gameObject.GetComponent<PlayerCombat>();
-            playerCombat.DamagePlayer(boulderDamage, gameObject);
+            playerCombat = other.gameObject.GetComponent<PlayerCombatV2>();
+            playerCombat.DamagePlayer(gameObject, boulderDamage);
             Destroy(gameObject);
         }
     }

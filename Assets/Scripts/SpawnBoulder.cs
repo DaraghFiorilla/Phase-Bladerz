@@ -47,7 +47,7 @@ public class SpawnBoulder : MonoBehaviour
 
     private void OnDrawGizmos() // This draws the area where boulders can spawn in the scene window
     {
-        Gizmos.color = new Color(0, 255, 0, 100);
+        Gizmos.color = new Color(0, 255, 0, 0.5f);
         Gizmos.DrawCube(spawnAreaCenter, spawnAreaSize);
     }
 }

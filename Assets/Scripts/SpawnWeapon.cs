@@ -38,7 +38,7 @@ public class SpawnWeapon : MonoBehaviour
 
     private void OnDrawGizmos() // This draws the area where weapons can spawn in the scene window
     {
-        Gizmos.color = new Color(255, 0, 0, 100);
+        Gizmos.color = new Color(255, 0, 0, 0.5f);
         Gizmos.DrawCube(spawnAreaCenter, spawnAreaSize);
     }
 

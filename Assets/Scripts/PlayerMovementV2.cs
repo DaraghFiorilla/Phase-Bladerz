@@ -16,6 +16,7 @@ public class PlayerMovementV2 : MonoBehaviour
     private bool jumped = false, doubleJumped = false;
     private Animator animator;
     [SerializeField] private InputActionReference movement, jump;
+    public bool knockbackActive;
 
     // Start is called before the first frame update
     void Start()
@@ -39,10 +40,13 @@ public class PlayerMovementV2 : MonoBehaviour
         currentSpeed = Mathf.Clamp(currentSpeed, 0f, maxSpeed);
         rb.velocity = oldMovement * currentSpeed;*/
 
-        rb.velocity = new Vector2(horizontalMovement.x * maxSpeed, rb.velocity.y); // BASIC MOVEMENT
-        animator.SetFloat("speed", Mathf.Abs(horizontalMovement.x));
+        if (!knockbackActive)
+        {
+            rb.velocity = new Vector2(horizontalMovement.x * maxSpeed, rb.velocity.y); // BASIC MOVEMENT
+            animator.SetFloat("speed", Mathf.Abs(horizontalMovement.x));
+        }
 
-        if (rb.velocity.x < 0) // FLIPS PLAYER TO LEFT FACING
+        if (rb.velocity.x < 0) // FLIPS PLAYER TO LEFT FACING - THIS SHOULD BE BASED ON PLAYER INPUT NOT VELOCITY DUE TO KNOCKBACK. MOVE THIS TO ONMOVE()
         {
             gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
@@ -68,8 +72,6 @@ public class PlayerMovementV2 : MonoBehaviour
             jumped = false;
         }
     }
-
-
     
     public void OnMove(InputAction.CallbackContext context) // CALLED WHENEVER PLAYER MOVES
     {
@@ -83,7 +85,6 @@ public class PlayerMovementV2 : MonoBehaviour
             jumped = context.action.triggered;
             Debug.Log("OnJump run");
         }
-        
     }
 
     private bool IsGrounded() // Returns true if the player's groundcheck is touching ground

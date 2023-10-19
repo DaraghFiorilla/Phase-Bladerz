@@ -154,7 +154,7 @@
             "devices": [
                 {
                     "devicePath": "<Keyboard>",
-                    "isOptional": true,
+                    "isOptional": false,
                     "isOR": false
                 }
             ]
@@ -165,7 +165,12 @@
             "devices": [
                 {
                     "devicePath": "<Keyboard>",
-                    "isOptional": true,
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
                     "isOR": false
                 }
             ]

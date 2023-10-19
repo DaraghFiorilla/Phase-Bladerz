@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SocialPlatforms;
 
 public class PlayerCombatV2 : MonoBehaviour
 {
@@ -16,7 +17,10 @@ public class PlayerCombatV2 : MonoBehaviour
     [SerializeField] private float attackCooldown = 0.5f;
     [SerializeField] private int attackPower;
     [SerializeField] private float knockbackStrength;
-    public bool canAttack;
+    [SerializeField] private float knockbackDelay;
+    //public bool canAttack;
+    [SerializeField] private Transform raycastOrigin;
+    [SerializeField] private float radius;
 
     [Header("Weapon Variables:")]
     public bool weaponEquipped;
@@ -29,7 +33,7 @@ public class PlayerCombatV2 : MonoBehaviour
     [Header("Other:")]
     private Rigidbody2D rb;
     private PlayerMovementV2 playerMovement;
-    public Animator animator;
+    private Animator animator;
     [SerializeField] private InputActionReference attack;
 
     public enum WeaponType
@@ -67,11 +71,11 @@ public class PlayerCombatV2 : MonoBehaviour
     {
         if (context.performed)
         {
-            if (isInWeaponTrigger)
+            if (isInWeaponTrigger) // pick up weapon
             {
                 weapon.GetComponent<WeaponScript>().EquipWeapon();
             }
-            else
+            else // attack
             {
                 Debug.Log("Attacking");
                 animator.SetTrigger("attack");
@@ -130,5 +134,49 @@ public class PlayerCombatV2 : MonoBehaviour
         attackPower = 4;
         attackCooldown = 0.4f;
         weaponText.text = "Active weapon =  NONE";
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(0, 0, 255, 0.5f);
+        Vector2 position = raycastOrigin == null ? Vector2.zero : raycastOrigin.position;
+        Gizmos.DrawWireSphere(position, radius);
+    }
+
+    public void DetectColliders()
+    {
+        Debug.Log("Detect colliders run");
+        foreach (Collider2D collider in Physics2D.OverlapCircleAll(raycastOrigin.position, radius))
+        {
+            if (collider.CompareTag("Player") && collider.gameObject != gameObject)
+            {
+                Debug.Log("Player hit");
+                collider.gameObject.GetComponent<PlayerCombatV2>().DamagePlayer(gameObject, attackPower);
+                weaponCharge--;
+            }
+        }
+    }
+
+    public void DamagePlayer(GameObject sender, int damage)
+    {
+        playerHealth -= damage;
+        healthSlider.value = playerHealth;
+        if (playerHealth <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+
+        StopAllCoroutines();
+        playerMovement.knockbackActive = true;
+        Vector2 direction = (transform.position - sender.transform.position).normalized;
+        rb.AddForce(direction * knockbackStrength, ForceMode2D.Impulse);
+        StartCoroutine(KnockbackReset());
+    }
+
+    private IEnumerator KnockbackReset()
+    {
+        yield return new WaitForSeconds(knockbackDelay);
+        rb.velocity = Vector2.zero;
+        playerMovement.knockbackActive = false;
     }
 }

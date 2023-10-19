@@ -1571,7 +1571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NotificationBehavior: 2
-  m_MaxPlayerCount: 1
+  m_MaxPlayerCount: 2
   m_AllowJoining: 1
   m_JoinBehavior: 2
   m_PlayerJoinedEvent:
@@ -1613,6 +1613,10 @@ PrefabInstance:
       propertyPath: m_Actions
       value: 
       objectReference: {fileID: -944628639613478452, guid: 08b8ac6aa611d6644850b9e2cb7a2a0a, type: 3}
+    - target: {fileID: 1444052268716717839, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1444052268716717839, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: m_DefaultActionMap
       value: PlayerInput
@@ -1658,6 +1662,14 @@ PrefabInstance:
       value: PlayerInput/Jump[/Keyboard/upArrow,/Keyboard/w]
       objectReference: {fileID: 0}
     - target: {fileID: 1444052268716717839, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444052268716717839, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444052268716717839, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1668,6 +1680,10 @@ PrefabInstance:
     - target: {fileID: 1444052268716717839, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444052268716717839, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1444052268716717839, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1877,6 +1893,10 @@ PrefabInstance:
       propertyPath: knockbackStrength
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 6964748601669333094, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e140023ca14c8604d8e82fa97a0e604b, type: 2}
     - target: {fileID: 6982664302770443205, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: jump
       value: 
