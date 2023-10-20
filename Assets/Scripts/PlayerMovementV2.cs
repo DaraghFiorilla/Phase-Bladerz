@@ -59,13 +59,13 @@ public class PlayerMovementV2 : MonoBehaviour
         {
             if (IsGrounded()) // JUMP
             {
-                // JUMP ANIMATION HERE
+                animator.SetTrigger("jump");
                 doubleJumped = false;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
             else if (!IsGrounded() && !doubleJumped) // DOUBLE JUMP
             {
-                // JUMP ANIMATION HERE
+                animator.SetTrigger("jump");
                 doubleJumped = true;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }

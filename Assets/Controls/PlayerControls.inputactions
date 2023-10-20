@@ -37,7 +37,7 @@
                 {
                     "name": "",
                     "id": "9b22edcd-c4fa-4f16-84cc-d8eecbe24481",
-                    "path": "<Keyboard>/rightShift",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "Player2",
@@ -70,7 +70,7 @@
                 {
                     "name": "left",
                     "id": "b92dab97-715f-4887-afd5-6515c4b2015e",
-                    "path": "<Keyboard>/leftArrow",
+                    "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "Player2",
@@ -81,7 +81,7 @@
                 {
                     "name": "right",
                     "id": "9ceec135-16a9-47db-ba7d-b7a3c544c5c2",
-                    "path": "<Keyboard>/rightArrow",
+                    "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "Player2",
@@ -125,7 +125,7 @@
                 {
                     "name": "",
                     "id": "e2b9ea92-1460-4416-bc96-b773a9ecc78a",
-                    "path": "<Keyboard>/upArrow",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "Player2",
@@ -165,11 +165,11 @@
             "devices": [
                 {
                     "devicePath": "<Keyboard>",
-                    "isOptional": false,
+                    "isOptional": true,
                     "isOR": false
                 },
                 {
-                    "devicePath": "<Keyboard>",
+                    "devicePath": "<Gamepad>",
                     "isOptional": false,
                     "isOR": false
                 }

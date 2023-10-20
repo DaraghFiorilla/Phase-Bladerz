@@ -1906,12 +1906,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -5848428783668438112, guid: 08b8ac6aa611d6644850b9e2cb7a2a0a, type: 3}
     - target: {fileID: 6982664302770443205, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982664302770443205, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: inputActionMap.m_Id
       value: f6419876-4d84-4e53-97f6-30e2a399aa5b
       objectReference: {fileID: 0}
     - target: {fileID: 6982664302770443205, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: inputActionMap.m_Name
       value: Input
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982664302770443205, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
+      propertyPath: inputControlScheme.m_Name
+      value: Player2
       objectReference: {fileID: 0}
     - target: {fileID: 8705207634372941517, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: m_Enabled
