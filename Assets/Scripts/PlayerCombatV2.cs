@@ -27,6 +27,7 @@ public class PlayerCombatV2 : MonoBehaviour
     [SerializeField] private int maxWeaponCharge;
     private int weaponCharge;
     [SerializeField] private TextMeshProUGUI weaponText;
+    [SerializeField] private Slider weaponChargeSlider;
     public bool isInWeaponTrigger;
     public GameObject weapon;
 
@@ -56,6 +57,8 @@ public class PlayerCombatV2 : MonoBehaviour
         attackCooldown = 0.5f;
         weaponText.text = "Active weapon =  NONE";
         rb = gameObject.GetComponentInParent<Rigidbody2D>();
+        weaponChargeSlider.maxValue = maxWeaponCharge;
+        weaponChargeSlider.value = 0;
     }
 
     // Update is called once per frame
@@ -86,6 +89,7 @@ public class PlayerCombatV2 : MonoBehaviour
     public void SetWeapon(WeaponType weaponType)
     {
         weaponCharge = maxWeaponCharge;
+        weaponChargeSlider.value = weaponCharge;
         weaponEquipped = true;
         Debug.Log(weaponType);
 
@@ -134,6 +138,7 @@ public class PlayerCombatV2 : MonoBehaviour
         attackPower = 4;
         attackCooldown = 0.4f;
         weaponText.text = "Active weapon =  NONE";
+        weaponChargeSlider.value = weaponCharge;
     }
 
     private void OnDrawGizmosSelected()
@@ -153,6 +158,7 @@ public class PlayerCombatV2 : MonoBehaviour
                 Debug.Log("Player hit");
                 collider.gameObject.GetComponent<PlayerCombatV2>().DamagePlayer(gameObject, attackPower);
                 weaponCharge--;
+                weaponChargeSlider.value = weaponCharge;
             }
         }
     }

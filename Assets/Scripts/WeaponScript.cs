@@ -139,6 +139,7 @@ public class WeaponScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        playerCombat = other.gameObject.GetComponent<PlayerCombatV2>();
         playerCombat.isInWeaponTrigger = false;
         playerCombat.weapon = null;
         playerInTrigger = false;
