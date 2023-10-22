@@ -9,10 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4859195827483654645}
-  - component: {fileID: 4859195827483654647}
   - component: {fileID: 6982664302770443205}
   - component: {fileID: 1444052268716717839}
-  - component: {fileID: 6149855807177973479}
   - component: {fileID: 4179705348621997218}
   - component: {fileID: 1871449321585827047}
   - component: {fileID: 4859195827483654644}
@@ -44,28 +42,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4859195827483654647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4859195827483654642}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b05b606ba6fe1447a12fd2c9a188cac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  jumpForce: 10
-  groundCheck: {fileID: 4859195827878376614}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  playerOne: 0
-  animator: {fileID: 0}
-  movement: {fileID: 0}
-  jump: {fileID: 0}
 --- !u!114 &6982664302770443205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,6 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 5
+  attackSpeedDivider: 2
   jumpForce: 5
   groundCheck: {fileID: 4859195827878376614}
   groundLayer:
@@ -86,6 +63,7 @@ MonoBehaviour:
     m_Bits: 64
   movement: {fileID: 0}
   jump: {fileID: 0}
+  knockbackActive: 0
 --- !u!114 &1444052268716717839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,28 +94,6 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &6149855807177973479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4859195827483654642}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 198888816de99704c908a038863b9ca6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: 100
-  healthSlider: {fileID: 0}
-  attackAreaObject: {fileID: 0}
-  attackCooldown: 0.3
-  attackPower: 0
-  knockbackStrength: 30
-  weaponEquipped: 0
-  maxWeaponCharge: 3
-  weaponText: {fileID: 0}
-  animator: {fileID: 0}
 --- !u!114 &4179705348621997218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,12 +112,12 @@ MonoBehaviour:
   attackPower: 0
   knockbackStrength: 5
   knockbackDelay: 0.3
-  canAttack: 0
   raycastOrigin: {fileID: 3527066274298934771}
   radius: 0.8
   weaponEquipped: 0
   maxWeaponCharge: 3
   weaponText: {fileID: 0}
+  weaponChargeSlider: {fileID: 0}
   isInWeaponTrigger: 0
   weapon: {fileID: 0}
   attack: {fileID: 0}
@@ -251,6 +207,36 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PlayerCombatV2, Assembly-CSharp
         m_MethodName: DetectColliders
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SetAttackingSpeedPos:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6982664302770443205}
+        m_TargetAssemblyTypeName: PlayerMovementV2, Assembly-CSharp
+        m_MethodName: SetAttackingSpeed
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  SetAttackingSpeedNeg:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6982664302770443205}
+        m_TargetAssemblyTypeName: PlayerMovementV2, Assembly-CSharp
+        m_MethodName: SetAttackingSpeed
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

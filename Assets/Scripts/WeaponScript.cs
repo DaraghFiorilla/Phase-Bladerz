@@ -44,7 +44,6 @@ public class WeaponScript : MonoBehaviour
 
     public void EquipWeapon()
     {
-        Debug.Log("Weapon triggered");
         //Destroy(gameObject.transform.parent.gameObject);
         weaponManager.activeWeaponCount--;
         switch (weaponScriptType)
@@ -83,13 +82,11 @@ public class WeaponScript : MonoBehaviour
     private void GetRandomWeaponType()
     {
         int randomInt = Random.Range(1, 5);
-        Debug.Log(randomInt);
         switch (randomInt)
         {
             case 1:
                 {
                     weaponScriptType = WeaponScriptType.Katana;
-                    Debug.Log("sprite assigning");
                     spriteRenderer.sprite = spriteList[0];
                     break;
                 }
@@ -97,21 +94,18 @@ public class WeaponScript : MonoBehaviour
                 {
                     weaponScriptType = WeaponScriptType.Boomerang;
                     spriteRenderer.sprite = spriteList[1];
-                    Debug.Log("sprite assigning");
                     break;
                 }
             case 3:
                 {
                     weaponScriptType = WeaponScriptType.Axe;
                     spriteRenderer.sprite = spriteList[2];
-                    Debug.Log("sprite assigning");
                     break;
                 }
             case 4:
                 {
                     weaponScriptType = WeaponScriptType.Scythe;
                     spriteRenderer.sprite = spriteList[3];
-                    Debug.Log("sprite assigning");
                     break;
                 }
             default:
@@ -134,7 +128,6 @@ public class WeaponScript : MonoBehaviour
             playerCombat.isInWeaponTrigger = true;
             playerCombat.weapon = gameObject;
         }
-        Debug.Log("GameObject " + other.name + " has entered trigger of " + gameObject.name);
     }
 
     private void OnTriggerExit2D(Collider2D other)

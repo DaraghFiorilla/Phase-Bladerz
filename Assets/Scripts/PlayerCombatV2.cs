@@ -74,14 +74,16 @@ public class PlayerCombatV2 : MonoBehaviour
     {
         if (context.performed)
         {
-            if (isInWeaponTrigger) // pick up weapon
+            if (!playerMovement.attacking)
             {
-                weapon.GetComponent<WeaponScript>().EquipWeapon();
-            }
-            else // attack
-            {
-                Debug.Log("Attacking");
-                animator.SetTrigger("attack");
+                if (isInWeaponTrigger) // pick up weapon
+                {
+                    weapon.GetComponent<WeaponScript>().EquipWeapon();
+                }
+                else // attack
+                {
+                    animator.SetTrigger("attack");
+                }
             }
         }
     }
