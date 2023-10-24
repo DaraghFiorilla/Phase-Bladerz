@@ -3978,11 +3978,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4859195827483654644, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: m_Size.x
-      value: 3
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 4859195827483654644, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: m_Size.y
-      value: 2
+      value: 0.96
       objectReference: {fileID: 0}
     - target: {fileID: 4859195827483654644, guid: b0ded3b8ee219694fb7c0b495aeec36f, type: 3}
       propertyPath: m_Sprite
