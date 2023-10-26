@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms;
 
+
 public class PlayerCombatV2 : MonoBehaviour
 {
     [Header("Health Variables:")]
@@ -18,6 +19,7 @@ public class PlayerCombatV2 : MonoBehaviour
     [SerializeField] private int attackPower;
     [SerializeField] private float knockbackStrength;
     [SerializeField] private float knockbackDelay;
+     [SerializeField] private AudioSource HitSoundEffect;
     //public bool canAttack;
     [SerializeField] private Transform raycastOrigin;
     [SerializeField] private float radius;
@@ -158,6 +160,7 @@ public class PlayerCombatV2 : MonoBehaviour
             if (collider.CompareTag("Player") && collider.gameObject != gameObject)
             {
                 Debug.Log("Player hit");
+                HitSoundEffect.Play();
                 collider.gameObject.GetComponent<PlayerCombatV2>().DamagePlayer(gameObject, attackPower);
                 weaponCharge--;
                 weaponChargeSlider.value = weaponCharge;

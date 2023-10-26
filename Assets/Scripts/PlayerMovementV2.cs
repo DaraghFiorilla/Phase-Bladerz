@@ -15,6 +15,8 @@ public class PlayerMovementV2 : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private AudioSource JumpSoundEffect;
+    [SerializeField] private AudioSource DoubleJumpSoundEffect;
     private bool jumped = false, doubleJumped = false;
     private Animator animator;
     [SerializeField] private InputActionReference movement, jump;
@@ -65,12 +67,14 @@ public class PlayerMovementV2 : MonoBehaviour
                 animator.SetTrigger("jump");
                 doubleJumped = false;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                JumpSoundEffect.Play();
             }
             else if (!IsGrounded() && !doubleJumped) // DOUBLE JUMP
             {
                 animator.SetTrigger("jump");
                 doubleJumped = true;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                DoubleJumpSoundEffect.Play();
             }
             jumped = false;
         }
