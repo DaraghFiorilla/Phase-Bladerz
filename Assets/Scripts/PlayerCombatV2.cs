@@ -68,6 +68,7 @@ public class PlayerCombatV2 : MonoBehaviour
     {
         if (weaponEquipped && weaponCharge == 0)
         {
+            weaponChargeSlider.enabled = false;
             RemoveWeapon();
         }
     }
@@ -133,6 +134,7 @@ public class PlayerCombatV2 : MonoBehaviour
 
         }
         weaponText.text = "Active weapon =  " + weaponType.ToString().ToUpper();
+        weaponChargeSlider.enabled = true;
     }
 
     private void RemoveWeapon()
@@ -143,6 +145,7 @@ public class PlayerCombatV2 : MonoBehaviour
         attackCooldown = 0.4f;
         weaponText.text = "Active weapon =  NONE";
         weaponChargeSlider.value = weaponCharge;
+        weaponChargeSlider.enabled = false; 
     }
 
     private void OnDrawGizmosSelected()
