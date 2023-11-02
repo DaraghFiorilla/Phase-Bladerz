@@ -44,7 +44,6 @@ public class WeaponScript : MonoBehaviour
 
     public void EquipWeapon()
     {
-        //Destroy(gameObject.transform.parent.gameObject);
         weaponManager.activeWeaponCount--;
         switch (weaponScriptType)
         {

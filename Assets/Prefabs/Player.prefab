@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6982664302770443205}
   - component: {fileID: 1444052268716717839}
   - component: {fileID: 4179705348621997218}
-  - component: {fileID: 1871449321585827047}
   - component: {fileID: 4859195827483654644}
   - component: {fileID: 5444969909667292735}
   - component: {fileID: 6964748601669333094}
@@ -61,9 +60,12 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  JumpSoundEffect: {fileID: 0}
+  DoubleJumpSoundEffect: {fileID: 0}
   movement: {fileID: 0}
   jump: {fileID: 0}
   knockbackActive: 0
+  attacking: 0
 --- !u!114 &1444052268716717839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,10 +110,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: 100
   healthSlider: {fileID: 0}
-  attackCooldown: 0.5
   attackPower: 0
   knockbackStrength: 5
   knockbackDelay: 0.3
+  HitSoundEffect: {fileID: 0}
   raycastOrigin: {fileID: 3527066274298934771}
   radius: 0.8
   weaponEquipped: 0
@@ -121,21 +123,7 @@ MonoBehaviour:
   isInWeaponTrigger: 0
   weapon: {fileID: 0}
   attack: {fileID: 0}
---- !u!114 &1871449321585827047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4859195827483654642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cdb00d6abd99b1429ec6f9a2ff1ce51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkInterval: 5
-  checkDistance: 5
-  lavaPrefab: {fileID: 0}
+  isMiku: 0
 --- !u!212 &4859195827483654644
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -89,7 +89,7 @@ public class PlayerCombatV2 : MonoBehaviour
         {
             if (!playerMovement.attacking)
             {
-                if (isInWeaponTrigger) // pick up weapon
+                if (isInWeaponTrigger && !weaponEquipped) // pick up weapon
                 {
                     weapon.GetComponent<WeaponScript>().EquipWeapon();
                 }
