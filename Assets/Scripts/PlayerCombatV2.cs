@@ -15,7 +15,7 @@ public class PlayerCombatV2 : MonoBehaviour
     [SerializeField] private Slider healthSlider;
 
     [Header("Attack Variables:")]
-    [SerializeField] private float attackCooldown = 0.5f;
+    //[SerializeField] private float attackCooldown = 0.5f;
     [SerializeField] private int attackPower;
     [SerializeField] private float knockbackStrength;
     [SerializeField] private float knockbackDelay;
@@ -38,12 +38,13 @@ public class PlayerCombatV2 : MonoBehaviour
     private PlayerMovementV2 playerMovement;
     private Animator animator;
     [SerializeField] private InputActionReference attack;
+    [SerializeField] private bool isMiku;
 
     public enum WeaponType
     {
         Katana,
         Boomerang,
-        Axe,
+        Sword,
         Scythe
     }
 
@@ -56,11 +57,20 @@ public class PlayerCombatV2 : MonoBehaviour
         healthSlider.value = playerHealth;
         playerMovement = gameObject.GetComponent<PlayerMovementV2>();
         attackPower = 4;
-        attackCooldown = 0.5f;
+        //attackCooldown = 0.5f;
         weaponText.text = "Active weapon =  NONE";
         rb = gameObject.GetComponentInParent<Rigidbody2D>();
         weaponChargeSlider.maxValue = maxWeaponCharge;
         weaponChargeSlider.value = 0;
+
+        if (isMiku)
+        {
+            animator.SetBool("scythe", true);
+        }
+        else
+        {
+            animator.SetBool("sword", true);
+        }
     }
 
     // Update is called once per frame
@@ -103,32 +113,62 @@ public class PlayerCombatV2 : MonoBehaviour
             case WeaponType.Katana:
                 {
                     attackPower = 8;
-                    attackCooldown = 0.7f;
+                    //attackCooldown = 0.7f;
+                    animator.SetBool("katana", true);
+                    animator.SetBool("scythe", false);
+                    animator.SetBool("boomerang", false);
+                    animator.SetBool("sword", false);
                     break;
                 }
             case WeaponType.Boomerang:
                 {
                     attackPower = 6;
-                    attackCooldown = 1f;
+                    //attackCooldown = 1f;
+                    animator.SetBool("katana", false);
+                    animator.SetBool("scythe", false);
+                    animator.SetBool("boomerang", true);
+                    animator.SetBool("sword", false);
                     break;
                 }
-            case WeaponType.Axe:
+            case WeaponType.Sword:
                 {
                     attackPower = 10;
-                    attackCooldown = 1f;
+                    animator.SetBool("katana", false);
+                    animator.SetBool("scythe", false);
+                    animator.SetBool("boomerang", false);
+                    animator.SetBool("sword", true);
+                    //attackCooldown = 1f;
                     break;
                 }
             case WeaponType.Scythe:
                 {
                     attackPower = 7;
-                    attackCooldown = 0.6f;
+                    animator.SetBool("katana", false);
+                    animator.SetBool("scythe", true);
+                    animator.SetBool("boomerang", false);
+                    animator.SetBool("sword", false);
+                    //attackCooldown = 0.6f;
                     break;
                 }
 
             default:
                 {
                     attackPower = 4;
-                    attackCooldown = 0.5f;
+                    if (isMiku)
+                    {
+                        animator.SetBool("katana", false);
+                        animator.SetBool("scythe", true);
+                        animator.SetBool("boomerang", false);
+                        animator.SetBool("sword", false);
+                    }
+                    else
+                    {
+                        animator.SetBool("katana", false);
+                        animator.SetBool("scythe", false);
+                        animator.SetBool("boomerang", false);
+                        animator.SetBool("sword", false);
+                    }
+                    //attackCooldown = 0.5f;
                     break;
                 }
 
@@ -142,10 +182,25 @@ public class PlayerCombatV2 : MonoBehaviour
         weaponEquipped = false;
         weaponCharge = 0;
         attackPower = 4;
-        attackCooldown = 0.4f;
+        //attackCooldown = 0.4f;
         weaponText.text = "Active weapon =  NONE";
         weaponChargeSlider.value = weaponCharge;
-        weaponChargeSlider.enabled = false; 
+        weaponChargeSlider.enabled = false;
+
+        if (isMiku)
+        {
+            animator.SetBool("katana", false);
+            animator.SetBool("scythe", true);
+            animator.SetBool("boomerang", false);
+            animator.SetBool("sword", false);
+        }
+        else
+        {
+            animator.SetBool("katana", false);
+            animator.SetBool("scythe", false);
+            animator.SetBool("boomerang", false);
+            animator.SetBool("sword", false);
+        }
     }
 
     private void OnDrawGizmosSelected()

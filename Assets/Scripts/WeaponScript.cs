@@ -18,7 +18,7 @@ public class WeaponScript : MonoBehaviour
     {
         Katana,
         Boomerang,
-        Axe,
+        Sword,
         Scythe
     }
 
@@ -58,9 +58,9 @@ public class WeaponScript : MonoBehaviour
                     playerCombat.SetWeapon(PlayerCombatV2.WeaponType.Boomerang);
                     break;
                 }
-            case WeaponScriptType.Axe:
+            case WeaponScriptType.Sword:
                 {
-                    playerCombat.SetWeapon(PlayerCombatV2.WeaponType.Axe);
+                    playerCombat.SetWeapon(PlayerCombatV2.WeaponType.Sword);
                     break;
                 }
             case WeaponScriptType.Scythe:
@@ -98,7 +98,7 @@ public class WeaponScript : MonoBehaviour
                 }
             case 3:
                 {
-                    weaponScriptType = WeaponScriptType.Axe;
+                    weaponScriptType = WeaponScriptType.Sword;
                     spriteRenderer.sprite = spriteList[2];
                     break;
                 }

@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class LavaScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private int lavaDamage;
+    private PlayerCombatV2 playerCombat;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            playerCombat = other.GetComponent<PlayerCombatV2>();
+            playerCombat.DamagePlayer(gameObject, lavaDamage);
+        }
     }
 }
