@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7eb225faafb92ac49b204afc30937bca
+guid: 216b19ea7007d1645a553f0959078303
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 13
+  spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: holymoly_0
+      name: KenAll_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c55671f5999915349bba43266783ef95
-      internalID: -667588194
+      spriteID: 891b6b081c7cc73418050ea2923f4a07
+      internalID: 746249981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_1
+      name: KenAll_1
       rect:
         serializedVersion: 2
         x: 128
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 458e66f7711361549b7822ca396db6b8
-      internalID: -1082279131
+      spriteID: 977e405cc1e1dc14ea3303d6e6adcb1d
+      internalID: 2070748961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_2
+      name: KenAll_2
       rect:
         serializedVersion: 2
         x: 256
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 289babfbaaab13a4ea9c41054c216887
-      internalID: -519593598
+      spriteID: c7794850cd5623344b4e634b114b0c69
+      internalID: -971330939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_3
+      name: KenAll_3
       rect:
         serializedVersion: 2
         x: 384
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4eee109d3137f0d49a49e9904aefb71c
-      internalID: -124998930
+      spriteID: 2dc725fb8794555448022c40e1779932
+      internalID: 759707464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_4
+      name: KenAll_4
       rect:
         serializedVersion: 2
         x: 512
@@ -215,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d93a5ea1b34c3e4ca668736c097bf1c
-      internalID: -361307402
+      spriteID: 06e15a4852f471541a9ca08e4566ce4b
+      internalID: -244226316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_5
+      name: KenAll_5
       rect:
         serializedVersion: 2
         x: 640
@@ -236,14 +236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3022f8b2ee4a7f7409e55fe388b288a4
-      internalID: 1579504489
+      spriteID: fd77f2b59d24c494584360295a7e8a54
+      internalID: 557111422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_6
+      name: KenAll_6
       rect:
         serializedVersion: 2
         x: 768
@@ -257,14 +257,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc990f2e69309d94c94061e52b419472
-      internalID: 736942068
+      spriteID: 76f5dbe1365166349813f1e98507c62e
+      internalID: -449808539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_7
+      name: KenAll_7
       rect:
         serializedVersion: 2
         x: 896
@@ -278,14 +278,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c5cb87074df683419bb0791adefb952
-      internalID: -492415705
+      spriteID: db795904f79469840bb61612e85e3896
+      internalID: 2086058120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_8
+      name: KenAll_8
       rect:
         serializedVersion: 2
         x: 1024
@@ -299,14 +299,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3074ba1305a503047829a2fc156a3266
-      internalID: -1584634547
+      spriteID: 4df456763c38bde42a8d5a9a80960e47
+      internalID: -1226279763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_9
+      name: KenAll_9
       rect:
         serializedVersion: 2
         x: 1152
@@ -320,14 +320,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56ee8c35b3e9b3a4186714f3d210993d
-      internalID: -1020514918
+      spriteID: f449a394f4995ef478d0584339070189
+      internalID: -1694993140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_10
+      name: KenAll_10
       rect:
         serializedVersion: 2
         x: 1280
@@ -341,14 +341,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21fbe0a3e6dd76b45a187ddffd50c28b
-      internalID: -708808318
+      spriteID: 31e620e1c67870b4dbc5021f81de4ef0
+      internalID: 535337442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_11
+      name: KenAll_11
       rect:
         serializedVersion: 2
         x: 1408
@@ -362,14 +362,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acdf3fe2c68313645b6ba02e52486ac0
-      internalID: -120834270
+      spriteID: 6b5be4b9170f21e47bf97a878b858e6e
+      internalID: -6478308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_12
+      name: KenAll_12
       rect:
         serializedVersion: 2
         x: 1536
@@ -383,14 +383,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a21e6ed6e69dbe40850b170d08fbe0f
-      internalID: -461402299
+      spriteID: eed6d42e2ff6c584785e2ce085adc30a
+      internalID: -1200811473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_13
+      name: KenAll_13
       rect:
         serializedVersion: 2
         x: 0
@@ -404,14 +404,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 417ee448a428b4e43802d835bb0d1afc
-      internalID: 1806046666
+      spriteID: a927539cd70089a41b8af388afdb02e5
+      internalID: 1313207632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_14
+      name: KenAll_14
       rect:
         serializedVersion: 2
         x: 128
@@ -425,14 +425,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbecc32dd892b314fb9c6af924b5dd4d
-      internalID: 1098715709
+      spriteID: 6022c365fd4ada3479b72a47001c5c31
+      internalID: 925832130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_15
+      name: KenAll_15
       rect:
         serializedVersion: 2
         x: 256
@@ -446,14 +446,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 341ff49fdbab25f489392ad44f4ec972
-      internalID: 139316598
+      spriteID: 371cea1db51993f46a8690d54130326b
+      internalID: 1234836198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_16
+      name: KenAll_16
       rect:
         serializedVersion: 2
         x: 384
@@ -467,14 +467,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65291ef208e270c418264bfdb8fd954b
-      internalID: 1288441872
+      spriteID: 526f84ac706c1324fbc54e8f2626d7a3
+      internalID: 1639995839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_17
+      name: KenAll_17
       rect:
         serializedVersion: 2
         x: 512
@@ -488,14 +488,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0982441ef6ed2d4282641951c4f23ea
-      internalID: 1271776183
+      spriteID: 0ca72dc4ec221d84184f33beee5c2bcb
+      internalID: -87912795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_18
+      name: KenAll_18
       rect:
         serializedVersion: 2
         x: 640
@@ -509,14 +509,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75cb4848adee7be49a860b103e255c2e
-      internalID: 1154623399
+      spriteID: 43f34bc7a25e2bd49a7762b07d83b363
+      internalID: 660043588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_19
+      name: KenAll_19
       rect:
         serializedVersion: 2
         x: 768
@@ -530,14 +530,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b9c988cc51b2074989befe3f4d7e316
-      internalID: 1445603635
+      spriteID: 0b46038a16fc16d4e92c6fa45260ed53
+      internalID: 1283790530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_20
+      name: KenAll_20
       rect:
         serializedVersion: 2
         x: 896
@@ -551,14 +551,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f373ad82a37ea1842b0f4d5ba314453e
-      internalID: 1447963297
+      spriteID: e618ae152a35339418a231968e86673b
+      internalID: 1887881097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_21
+      name: KenAll_21
       rect:
         serializedVersion: 2
         x: 1024
@@ -572,14 +572,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cec974c5d6fd1644292e4fc891d2ddd5
-      internalID: 1066171290
+      spriteID: bfca4a5e94d47934faab8b6ebfaeb5a4
+      internalID: 680374118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_22
+      name: KenAll_22
       rect:
         serializedVersion: 2
         x: 1152
@@ -593,14 +593,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afc9f016658312e409ec39cdaeac3512
-      internalID: -88446242
+      spriteID: fbf106fc7bcb1f94c8f562528b23a278
+      internalID: 1284791392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_23
+      name: KenAll_23
       rect:
         serializedVersion: 2
         x: 1280
@@ -614,14 +614,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20fde3a7c7027be4a92200bf5231b09f
-      internalID: -373019135
+      spriteID: 77ee2755268db8e44b3144a47dba1564
+      internalID: 830491450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_24
+      name: KenAll_24
       rect:
         serializedVersion: 2
         x: 1408
@@ -635,14 +635,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e346948f70c2e614096ec2fb4f8b0018
-      internalID: 848443117
+      spriteID: 9836ec59e47c77f42a5dbe0719bf7fdc
+      internalID: 109460264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_25
+      name: KenAll_25
       rect:
         serializedVersion: 2
         x: 1536
@@ -656,14 +656,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7635afdfd14c3346a4677a366fefff8
-      internalID: -545462651
+      spriteID: c6439ec5a65a36340999c2e0ce91ef4d
+      internalID: -1950445350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_26
+      name: KenAll_26
       rect:
         serializedVersion: 2
         x: 0
@@ -677,14 +677,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b445648b11865304da311f4bd0bd01b0
-      internalID: -1945111326
+      spriteID: 8b54499dde8189f4ea8dafcfe058e2af
+      internalID: 293622557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_27
+      name: KenAll_27
       rect:
         serializedVersion: 2
         x: 128
@@ -698,14 +698,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0f3d35ceba192243a502479b26d5b34
-      internalID: -410106003
+      spriteID: 7d6614615094b6e4cbb06f72285fc9c0
+      internalID: -1649933920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_28
+      name: KenAll_28
       rect:
         serializedVersion: 2
         x: 256
@@ -719,14 +719,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: febd1e7dd44060048aca9501dde743f0
-      internalID: -1222278533
+      spriteID: 12da436d9dca87b4a910992a2496f010
+      internalID: -804458076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_29
+      name: KenAll_29
       rect:
         serializedVersion: 2
         x: 384
@@ -740,14 +740,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ad8af46e6b6ab04ea58684e5df71096
-      internalID: 1285911765
+      spriteID: 321dfdfdf49b9e046867fc18312d6b59
+      internalID: -2110326011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_30
+      name: KenAll_30
       rect:
         serializedVersion: 2
         x: 512
@@ -761,14 +761,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef800b568a2d1044a9794a810a48a1f8
-      internalID: 1857432540
+      spriteID: 2fc52ec7494767c4483f0993893b94a1
+      internalID: 1590669122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_31
+      name: KenAll_31
       rect:
         serializedVersion: 2
         x: 640
@@ -782,14 +782,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4db9c01f1c7a83b49a66c7f4e0da710e
-      internalID: -157834426
+      spriteID: 4028a7361a708884098e20b0665a5d2e
+      internalID: 509472619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_32
+      name: KenAll_32
       rect:
         serializedVersion: 2
         x: 768
@@ -803,14 +803,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00bed704c9da2c24db33f2789576ce23
-      internalID: 244347588
+      spriteID: fe6ffd32dceb8e546abef5fd2832a1e1
+      internalID: 1562098418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_33
+      name: KenAll_33
       rect:
         serializedVersion: 2
         x: 896
@@ -824,14 +824,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53382430463f6804ab0072d78a5cc558
-      internalID: -769907897
+      spriteID: 74ec4d79f13dd6b498e391e12dc984fd
+      internalID: 851432651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_34
+      name: KenAll_34
       rect:
         serializedVersion: 2
         x: 1024
@@ -845,14 +845,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c41d2074853825345a7a14b939da027e
-      internalID: 947584462
+      spriteID: 54a2054b9b5367f40a7b299095bb44b9
+      internalID: -59121215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_35
+      name: KenAll_35
       rect:
         serializedVersion: 2
         x: 1152
@@ -866,14 +866,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8b2240922a1bca4f83322bd66355d38
-      internalID: -1918338957
+      spriteID: 7aa41a7774cb0cb4b84a5566cf4d5f90
+      internalID: -1810282201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_36
+      name: KenAll_36
       rect:
         serializedVersion: 2
         x: 1280
@@ -887,14 +887,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 529aeee267713f4489b01edd705ce870
-      internalID: 1629246224
+      spriteID: 7653cf203606c3944b13ecf967d9b16a
+      internalID: 1529488810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_37
+      name: KenAll_37
       rect:
         serializedVersion: 2
         x: 1408
@@ -908,14 +908,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c9805039fc5cbe4eb7e2651bf24ee71
-      internalID: 448128612
+      spriteID: daad134448055b44e86297998a09e7fd
+      internalID: 686137363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_38
+      name: KenAll_38
       rect:
         serializedVersion: 2
         x: 1536
@@ -929,14 +929,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e060b2496be7344686c855772cdec1f
-      internalID: -1900480521
+      spriteID: e53d1b74b6a1ad24fb50f8b26e41d744
+      internalID: -1400700776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_39
+      name: KenAll_39
       rect:
         serializedVersion: 2
         x: 0
@@ -950,14 +950,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6273dc9fd4244241bff8fa515733258
-      internalID: -1947773326
+      spriteID: 90098666aafa20d44baf82d1707857cd
+      internalID: -1776785860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_40
+      name: KenAll_40
       rect:
         serializedVersion: 2
         x: 128
@@ -971,14 +971,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db0bae4c2221a6c40be2aae71e13fc66
-      internalID: 1793738978
+      spriteID: e3d1b7b62654f254485001442d8d0aa8
+      internalID: 1585372386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_41
+      name: KenAll_41
       rect:
         serializedVersion: 2
         x: 256
@@ -992,14 +992,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 600f84b8c35152b468b9c2637bd1d4f7
-      internalID: -726196885
+      spriteID: d2a354a7cff2d13459861515b2d7fd98
+      internalID: -284818049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_42
+      name: KenAll_42
       rect:
         serializedVersion: 2
         x: 384
@@ -1013,14 +1013,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cee97755ad572749b276b6a37d90b9d
-      internalID: 1219281230
+      spriteID: bd726fa107932414c8d1e23cccc51bdc
+      internalID: -946506705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_43
+      name: KenAll_43
       rect:
         serializedVersion: 2
         x: 512
@@ -1034,14 +1034,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91596bdf138b20544ab4608d7dd01fe7
-      internalID: 2006264343
+      spriteID: dbd4c2663d71f8642a96bc2955ed2ad7
+      internalID: 372365365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_44
+      name: KenAll_44
       rect:
         serializedVersion: 2
         x: 640
@@ -1055,14 +1055,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89db8c9743b0ed54481c6b01592bb9e0
-      internalID: -217704915
+      spriteID: a283527d57e2b544ab6c011b14132e38
+      internalID: 820124124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_45
+      name: KenAll_45
       rect:
         serializedVersion: 2
         x: 768
@@ -1076,14 +1076,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be08b429fc4128f42a8692e39b9b6706
-      internalID: 1523308579
+      spriteID: 2e351f91871070146b558f545840df39
+      internalID: -1824640967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_46
+      name: KenAll_46
       rect:
         serializedVersion: 2
         x: 896
@@ -1097,14 +1097,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97ab4452a9cde834186a0181b1bf19dd
-      internalID: -1500553583
+      spriteID: 61cc5969a024bf246bb6a3857884bec0
+      internalID: 1425677453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_47
+      name: KenAll_47
       rect:
         serializedVersion: 2
         x: 1024
@@ -1118,14 +1118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86d578aa2bebcce4298233f5a42161a6
-      internalID: -940935446
+      spriteID: 64b172d612b2cc645ab6b17f53311dbc
+      internalID: 47969339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_48
+      name: KenAll_48
       rect:
         serializedVersion: 2
         x: 1152
@@ -1139,14 +1139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cb3f89d3b9d53a4f87d892f15a6ac33
-      internalID: 1627792847
+      spriteID: d3d1fae2844df1b46bcd097ba5656e08
+      internalID: -657882507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_49
+      name: KenAll_49
       rect:
         serializedVersion: 2
         x: 1280
@@ -1160,14 +1160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 730e08b5ef77e7243aa4c52bf4a3ac85
-      internalID: -477279835
+      spriteID: ea87a7b6cb4d3c2488631c928a24548b
+      internalID: 670308170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_50
+      name: KenAll_50
       rect:
         serializedVersion: 2
         x: 1408
@@ -1181,14 +1181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62cc7d5125c543e409d109e2bdee52b1
-      internalID: -314397257
+      spriteID: 8e05e053d8260c440b211d236cb1efda
+      internalID: -1466027077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_51
+      name: KenAll_51
       rect:
         serializedVersion: 2
         x: 1536
@@ -1202,14 +1202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5e6417a50fe52247b7481132a9ad4af
-      internalID: 1661285938
+      spriteID: c87dc0015e819ef41a07923c4b664978
+      internalID: -829623296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_52
+      name: KenAll_52
       rect:
         serializedVersion: 2
         x: 0
@@ -1223,14 +1223,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94250d9a86c153840bc5161dadb7eb71
-      internalID: 753460399
+      spriteID: ffc5ba5052fbaf1479b9396368a42167
+      internalID: -1114898637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_53
+      name: KenAll_53
       rect:
         serializedVersion: 2
         x: 128
@@ -1244,14 +1244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 775461a0f7fb95c48814b8c91d572d17
-      internalID: -924805331
+      spriteID: cd73c2b927057024c9b4970cdd4f353d
+      internalID: -873367217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_54
+      name: KenAll_54
       rect:
         serializedVersion: 2
         x: 256
@@ -1265,14 +1265,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 640219513dba4bf4f9279c9901dd087d
-      internalID: 1255340926
+      spriteID: 04a7ffbedc4d80042bb19b89b74088c7
+      internalID: 1063236004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_55
+      name: KenAll_55
       rect:
         serializedVersion: 2
         x: 384
@@ -1286,14 +1286,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6975e8a648f396a44910a096c6b4d160
-      internalID: 1947197282
+      spriteID: b8ecf25a8cd87d14785ddbf3f5274506
+      internalID: -1429650765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_56
+      name: KenAll_56
       rect:
         serializedVersion: 2
         x: 512
@@ -1307,14 +1307,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d741f7cfcf297b4458a0b515d2bbae31
-      internalID: 1555369145
+      spriteID: de816d45df03ee8419f77dee6b58a064
+      internalID: -1781274681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_57
+      name: KenAll_57
       rect:
         serializedVersion: 2
         x: 640
@@ -1328,14 +1328,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e25bc5c9b2d6514aaccc3b453847b90
-      internalID: -1979812695
+      spriteID: b70b50ec717a1d147bb7105b2a1f931e
+      internalID: -791410159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_58
+      name: KenAll_58
       rect:
         serializedVersion: 2
         x: 768
@@ -1349,14 +1349,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c6feab4dda30a844b7f38f99b39d316
-      internalID: -321520713
+      spriteID: a9dbe7678e274e740860e25e8fbb03b9
+      internalID: -1203456206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_59
+      name: KenAll_59
       rect:
         serializedVersion: 2
         x: 896
@@ -1370,14 +1370,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab58227de46b0574da4c0cf5874b3ba8
-      internalID: -665968171
+      spriteID: f3fb3780e28fcac449b672623f4561e0
+      internalID: -1970669702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_60
+      name: KenAll_60
       rect:
         serializedVersion: 2
         x: 1024
@@ -1391,14 +1391,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e78d3c960af3d4429846c16dd5d66e2
-      internalID: 1794400585
+      spriteID: 9889fb87f4bcd6b488c761318226e434
+      internalID: -1540536550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_61
+      name: KenAll_61
       rect:
         serializedVersion: 2
         x: 1152
@@ -1412,14 +1412,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b34a3604b013af4aa1bd954862e762d
-      internalID: -140345491
+      spriteID: b83d87c2dadbc4848b22965109873392
+      internalID: 1215438986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_62
+      name: KenAll_62
       rect:
         serializedVersion: 2
         x: 1280
@@ -1433,14 +1433,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72c8fb8e7b9ad8e4e9685746f5e8fe9a
-      internalID: -1616146043
+      spriteID: c2874bb84613e154096cdd25ffc559c0
+      internalID: -1841754569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_63
+      name: KenAll_63
       rect:
         serializedVersion: 2
         x: 1408
@@ -1454,14 +1454,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99cb5fb8de4314e438943b8414a7cb59
-      internalID: 247897934
+      spriteID: 3f42f45ae1da1714c8acf804ed9f8d0d
+      internalID: -2076076101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_64
+      name: KenAll_64
       rect:
         serializedVersion: 2
         x: 1536
@@ -1475,14 +1475,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94383eafd4790ac459ec310ea4425155
-      internalID: 1082971619
+      spriteID: ee52f3e611d0f1948ae5f1f85332a072
+      internalID: 643693154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_65
+      name: KenAll_65
       rect:
         serializedVersion: 2
         x: 0
@@ -1496,14 +1496,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f9eeb7ba797cb045b688dd446a2504e
-      internalID: 1459395122
+      spriteID: 48c6872da6c24f94eb4cfd36a8ea7a1e
+      internalID: 2101257746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_66
+      name: KenAll_66
       rect:
         serializedVersion: 2
         x: 128
@@ -1517,14 +1517,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 864a5097f4d25914e9657e31a2d11c6c
-      internalID: 1960948267
+      spriteID: 311cf95e455c7564a94db5a7d54b945f
+      internalID: -782103580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_67
+      name: KenAll_67
       rect:
         serializedVersion: 2
         x: 256
@@ -1538,14 +1538,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41550bc3204f99a4ca378803ee4a2aab
-      internalID: -1929842540
+      spriteID: d5c8a1e975015304a91c01fa122b9528
+      internalID: -123162691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_68
+      name: KenAll_68
       rect:
         serializedVersion: 2
         x: 384
@@ -1559,14 +1559,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1feab9bcdbfac214192dca8617512572
-      internalID: -1219855444
+      spriteID: 6fbc9d95588ea5249993890ab7f60df3
+      internalID: 985271829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_69
+      name: KenAll_69
       rect:
         serializedVersion: 2
         x: 512
@@ -1580,14 +1580,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d94d0620111e0b4f9946a57b7ee74b4
-      internalID: 1319753828
+      spriteID: 4461d902625ea1d49b28d85ca9130f64
+      internalID: 1216222061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_70
+      name: KenAll_70
       rect:
         serializedVersion: 2
         x: 640
@@ -1601,14 +1601,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78f060fd68014fc4d906011ae1bded68
-      internalID: 134660810
+      spriteID: 442e1c2b4ed2fda41b5ba4eda1a92c87
+      internalID: 103818999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_71
+      name: KenAll_71
       rect:
         serializedVersion: 2
         x: 768
@@ -1622,14 +1622,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f2ee39ebcd1f8341ba06f67e94bc1bd
-      internalID: 1992159845
+      spriteID: 28e76b35f5b18de419269cfbd918d703
+      internalID: 633365069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_72
+      name: KenAll_72
       rect:
         serializedVersion: 2
         x: 896
@@ -1643,14 +1643,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52580b0272ef5844faf3054a99a9e691
-      internalID: -1712137036
+      spriteID: 655cb47ed6d56794bbff73e6dc7c3bec
+      internalID: -1661525903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_73
+      name: KenAll_73
       rect:
         serializedVersion: 2
         x: 1024
@@ -1664,14 +1664,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51e1200636a92804193d4195ab349370
-      internalID: 462954533
+      spriteID: d01cbdf77912513418155699d4833c6e
+      internalID: -860045514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_74
+      name: KenAll_74
       rect:
         serializedVersion: 2
         x: 1152
@@ -1685,14 +1685,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d72a7a99ccd5c2a4bbbb1683f8204442
-      internalID: -1504153427
+      spriteID: 54d85c8725822c74ab15712818107e0f
+      internalID: 1373490344
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_75
+      name: KenAll_75
       rect:
         serializedVersion: 2
         x: 1280
@@ -1706,14 +1706,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a699874f74ea0a4aad62259c3a5e584
-      internalID: 1791678326
+      spriteID: cbe8a7be5905404408810057135d0647
+      internalID: 1470023472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_76
+      name: KenAll_76
       rect:
         serializedVersion: 2
         x: 1408
@@ -1727,14 +1727,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eab8635a43833ca42aeb8bf6a1ea40a5
-      internalID: -2090908446
+      spriteID: b8394505846e242488f03e9cc6bd2145
+      internalID: -1698959589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_77
+      name: KenAll_77
       rect:
         serializedVersion: 2
         x: 1536
@@ -1748,14 +1748,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 268ac6a289dbf2f4988c3c4982b8c161
-      internalID: -1391592321
+      spriteID: a2b322543636b1b4fb485d0f5abc21dd
+      internalID: 1865209967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_78
+      name: KenAll_78
       rect:
         serializedVersion: 2
         x: 0
@@ -1769,14 +1769,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e152572524659e24c9a05eb85648b5df
-      internalID: -776223955
+      spriteID: d9f28c9c37fa3bf4d8e96a90a82917eb
+      internalID: -1993757751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_79
+      name: KenAll_79
       rect:
         serializedVersion: 2
         x: 128
@@ -1790,14 +1790,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 182ea54446031ec4585cf626944dc0f9
-      internalID: 34620761
+      spriteID: 2f23fc562c21b7641ac1cb71ce1e284e
+      internalID: 793093081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_80
+      name: KenAll_80
       rect:
         serializedVersion: 2
         x: 256
@@ -1811,14 +1811,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7fab248834a0384982af0fe48522c05
-      internalID: -1974923218
+      spriteID: d0618fff2418f8648956311d640b305c
+      internalID: 382537165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_81
+      name: KenAll_81
       rect:
         serializedVersion: 2
         x: 384
@@ -1832,14 +1832,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6117084875f75040b11c6d6a1e327d9
-      internalID: -421577805
+      spriteID: 37df4967b69c97c41ad736476b9d8c68
+      internalID: -772466689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_82
+      name: KenAll_82
       rect:
         serializedVersion: 2
         x: 512
@@ -1853,14 +1853,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff5f726229cbf044cb3c45a56994becf
-      internalID: 1119820043
+      spriteID: f605d303aaf91ab43af1adbc8f8ed897
+      internalID: -1315334362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_83
+      name: KenAll_83
       rect:
         serializedVersion: 2
         x: 640
@@ -1874,14 +1874,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55afdfdc094172f4cb45b9d8096040e6
-      internalID: -811845971
+      spriteID: 603746ad5e751f244888327edbd476d4
+      internalID: -1869121390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_84
+      name: KenAll_84
       rect:
         serializedVersion: 2
         x: 768
@@ -1895,14 +1895,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e28a1ebc67172fb4abc8bdd5a1b31ce0
-      internalID: -1788183480
+      spriteID: 767078b2b212dec4fb9eda3745c1226c
+      internalID: -343932425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_85
+      name: KenAll_85
       rect:
         serializedVersion: 2
         x: 896
@@ -1916,14 +1916,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f849d8bb14140a48807d0351cd6e595
-      internalID: 2034874041
+      spriteID: 36c879ada667fcd42802958d291e523a
+      internalID: 2019389085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_86
+      name: KenAll_86
       rect:
         serializedVersion: 2
         x: 1024
@@ -1937,14 +1937,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b327714373da404cbce132ce1003b1f
-      internalID: -2049988133
+      spriteID: f5e2e3046f9b78b4781854004eac7a2e
+      internalID: -645325110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_87
+      name: KenAll_87
       rect:
         serializedVersion: 2
         x: 1152
@@ -1958,14 +1958,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7eb9fe7fb9f636347826c2fa5e80d14c
-      internalID: 1697223198
+      spriteID: eb7cafabecafcff439f5d683c58861d3
+      internalID: -332214589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_88
+      name: KenAll_88
       rect:
         serializedVersion: 2
         x: 1280
@@ -1979,14 +1979,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a960ba9cb6f1bb84393be9be11807c22
-      internalID: 352885999
+      spriteID: b730a51b354044e48b60babe30499716
+      internalID: -1567686281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_89
+      name: KenAll_89
       rect:
         serializedVersion: 2
         x: 1408
@@ -2000,14 +2000,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a3b2dbf2705f7a4d8e459f8ad1dde8c
-      internalID: 613007137
+      spriteID: 9898c407910c5604b920fc505c5b01e7
+      internalID: 832395774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_90
+      name: KenAll_90
       rect:
         serializedVersion: 2
         x: 1536
@@ -2021,14 +2021,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb0d29b5dbd9879429c0f77e69920038
-      internalID: 1391535550
+      spriteID: ae511b66425a42146a46cca02029f850
+      internalID: -1902907510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_91
+      name: KenAll_91
       rect:
         serializedVersion: 2
         x: 0
@@ -2042,14 +2042,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 956e869f28cf9904aa8ff65daca1355d
-      internalID: 302781559
+      spriteID: e3ec0758cc121a24f87fe9fc62062de6
+      internalID: 1782588207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_92
+      name: KenAll_92
       rect:
         serializedVersion: 2
         x: 128
@@ -2063,14 +2063,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42b87b3cfb703af41b382bd9041ac8f5
-      internalID: 683503494
+      spriteID: d1aaca136b464c949903f64abb4a6c37
+      internalID: 1453768937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_93
+      name: KenAll_93
       rect:
         serializedVersion: 2
         x: 256
@@ -2084,14 +2084,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a9e23e1350c5bf4faa89104afa50e29
-      internalID: 1035366026
+      spriteID: e454ef76a4950494b82f0246ca754a4f
+      internalID: 1292587127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_94
+      name: KenAll_94
       rect:
         serializedVersion: 2
         x: 384
@@ -2105,14 +2105,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1a84af22d7fc944791b6692683934c7
-      internalID: 1037996209
+      spriteID: 9ed3895719367c2449af6af5829104a3
+      internalID: -54862904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_95
+      name: KenAll_95
       rect:
         serializedVersion: 2
         x: 512
@@ -2126,14 +2126,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d2a0f419ce48bd46bfb04e06f49f512
-      internalID: 355448505
+      spriteID: 415a0d4f2a71994469f03d4c54a49b93
+      internalID: 1861815773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_96
+      name: KenAll_96
       rect:
         serializedVersion: 2
         x: 640
@@ -2147,14 +2147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df8a8021b2f19514eac0a7abb8849566
-      internalID: -576895329
+      spriteID: 55280543948a2f04f8c79b54230701ac
+      internalID: -1258044039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_97
+      name: KenAll_97
       rect:
         serializedVersion: 2
         x: 768
@@ -2168,14 +2168,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afd677cddea9a8a4b9a1af8411a7e116
-      internalID: 376643385
+      spriteID: 0d06162d544256b429d15343c8f7cd41
+      internalID: 203690219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_98
+      name: KenAll_98
       rect:
         serializedVersion: 2
         x: 896
@@ -2189,14 +2189,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 453d486f9733ed14aa43c49cf415fa3c
-      internalID: -202456488
+      spriteID: e385b76119041574496ccae290ff32ce
+      internalID: 1286396762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_99
+      name: KenAll_99
       rect:
         serializedVersion: 2
         x: 1024
@@ -2210,14 +2210,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9b525f2a25103648bdede5a993098eb
-      internalID: 481368620
+      spriteID: 09f19a523842c034989d4d9ce82135dd
+      internalID: -1799954392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_100
+      name: KenAll_100
       rect:
         serializedVersion: 2
         x: 1152
@@ -2231,14 +2231,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88f717494ae078d47957ed816c9b5a54
-      internalID: 841205897
+      spriteID: c0c5a6705f697204281f80b1fc61e914
+      internalID: -1734036700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_101
+      name: KenAll_101
       rect:
         serializedVersion: 2
         x: 1280
@@ -2252,14 +2252,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2db5c2d4a42f02048871b5afb2a1b88f
-      internalID: 1850304483
+      spriteID: 9076fc2ed345ba34ca0b7a0870e37b2b
+      internalID: -607057741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_102
+      name: KenAll_102
       rect:
         serializedVersion: 2
         x: 1408
@@ -2273,14 +2273,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbe9ee1290c050546980db89fd9753f2
-      internalID: 490320465
+      spriteID: f4b7cfbfd24d91e478a5dea3d85d3ddc
+      internalID: -564917232
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_103
+      name: KenAll_103
       rect:
         serializedVersion: 2
         x: 1536
@@ -2294,14 +2294,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a2b3f7a5f30e054982711e3744be07a
-      internalID: 842587539
+      spriteID: e931b833cc286da44892537474fa16bd
+      internalID: 1722994249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_104
+      name: KenAll_104
       rect:
         serializedVersion: 2
         x: 0
@@ -2315,14 +2315,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f96da2c897d62eb418f48aa8a1fe95de
-      internalID: 1071478429
+      spriteID: b5db3d20e9ab78748b9995c6c0339235
+      internalID: -2007084355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_105
+      name: KenAll_105
       rect:
         serializedVersion: 2
         x: 128
@@ -2336,14 +2336,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96454cbc0e466e8419e709fac78caf66
-      internalID: 1872931420
+      spriteID: fe7f107030fdf904f91ddae7a796d17e
+      internalID: -2144516535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_106
+      name: KenAll_106
       rect:
         serializedVersion: 2
         x: 256
@@ -2357,14 +2357,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b04b51723499a4d48bd853c362a6ce8c
-      internalID: -1695003342
+      spriteID: 77ad0dee33711c54ea810605a640ccbe
+      internalID: -1981090028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_107
+      name: KenAll_107
       rect:
         serializedVersion: 2
         x: 384
@@ -2378,14 +2378,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d36449c6819e11408733c37352e22be
-      internalID: -721123587
+      spriteID: 7613da0ee63b29e4281514c37f5b3afc
+      internalID: 259401408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_108
+      name: KenAll_108
       rect:
         serializedVersion: 2
         x: 512
@@ -2399,14 +2399,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 413f8047e1e2b23418c1d948fbfb7d7c
-      internalID: 1649601672
+      spriteID: ce114a2fc3f192a46ae7f55a75a67356
+      internalID: -320620423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_109
+      name: KenAll_109
       rect:
         serializedVersion: 2
         x: 640
@@ -2420,14 +2420,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2b67d9192a1af04cae6406242e7dfa2
-      internalID: -11562190
+      spriteID: 70f2ff0f615986c44b06a6e188082725
+      internalID: -1703394895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_110
+      name: KenAll_110
       rect:
         serializedVersion: 2
         x: 768
@@ -2441,14 +2441,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c10a5c644ba297d43bd87eed183c84e6
-      internalID: 1464660430
+      spriteID: e2d610b28523b1a4295eed35be711771
+      internalID: 284102207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_111
+      name: KenAll_111
       rect:
         serializedVersion: 2
         x: 896
@@ -2462,14 +2462,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31fe5795f24c41946a912efa392675ac
-      internalID: 1838111701
+      spriteID: fb2c6d6eb539360449f7fd6f9e0a3a2e
+      internalID: 117588677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_112
+      name: KenAll_112
       rect:
         serializedVersion: 2
         x: 1024
@@ -2483,14 +2483,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1de63958776e464449f56c9287ce09ba
-      internalID: 690867206
+      spriteID: 8c6c4a96adfd394428cb1be01ff7c442
+      internalID: 1600055257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_113
+      name: KenAll_113
       rect:
         serializedVersion: 2
         x: 1152
@@ -2504,14 +2504,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97a051c3ce5452b4094c3ffc32986348
-      internalID: -1966612030
+      spriteID: 63eacdbc80e595e45b4ae847bdbb98d9
+      internalID: 99737428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_114
+      name: KenAll_114
       rect:
         serializedVersion: 2
         x: 1280
@@ -2525,14 +2525,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3dbe143cea740e42af46dc48b64df4c
-      internalID: -792135060
+      spriteID: ad01f8957641f304a8c5903d561efac3
+      internalID: -1085634214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_115
+      name: KenAll_115
       rect:
         serializedVersion: 2
         x: 1408
@@ -2546,14 +2546,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0dd2cf56ef20a24b99b0232fa6fa6c5
-      internalID: -1283026656
+      spriteID: 42e041768c95c8f4f8e09c0d88cee44c
+      internalID: 907919759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_116
+      name: KenAll_116
       rect:
         serializedVersion: 2
         x: 1536
@@ -2567,14 +2567,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7054d5008858e1489579fae6b8a30f8
-      internalID: -196547559
+      spriteID: dd1a72aae82ed794b94e91fe42d08dc5
+      internalID: 1437318580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_117
+      name: KenAll_117
       rect:
         serializedVersion: 2
         x: 0
@@ -2588,14 +2588,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4abbb2dff3f0eaa46a1a0a64516a62a6
-      internalID: -643972832
+      spriteID: 415ee0a421486b54e99a3a48604d5b3a
+      internalID: -1070781050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_118
+      name: KenAll_118
       rect:
         serializedVersion: 2
         x: 128
@@ -2609,14 +2609,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4c45a526c2ab6246b407350c2593abc
-      internalID: -229906563
+      spriteID: 1240dc4eaa2282c4481187f67a399e77
+      internalID: 1719423860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_119
+      name: KenAll_119
       rect:
         serializedVersion: 2
         x: 256
@@ -2630,14 +2630,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5815eccd8542d34fa5aa6abd7c5538a
-      internalID: 318448882
+      spriteID: 24dea03f07d73c448ad326414ccb438c
+      internalID: 1806420166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_120
+      name: KenAll_120
       rect:
         serializedVersion: 2
         x: 384
@@ -2651,14 +2651,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27dc9d9a8d724d846b030c2031b4730d
-      internalID: -471596865
+      spriteID: 1c54e1d90ceff354e8ebe6b1338cd7cf
+      internalID: 1666901576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_121
+      name: KenAll_121
       rect:
         serializedVersion: 2
         x: 512
@@ -2672,14 +2672,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ad152061a9ee6b4da5d125ea69c3312
-      internalID: 1389289404
+      spriteID: b3e6817c455660a47996a492a81916a0
+      internalID: -1287182254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_122
+      name: KenAll_122
       rect:
         serializedVersion: 2
         x: 640
@@ -2693,14 +2693,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 271f42d9d7323ca4d9ccbeeb702b9f2a
-      internalID: 326274137
+      spriteID: a403ded2d8416a8458a42dd305076403
+      internalID: 1298555678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_123
+      name: KenAll_123
       rect:
         serializedVersion: 2
         x: 768
@@ -2714,14 +2714,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca640a3a4e3f00145b764eec4719ced1
-      internalID: 1369808029
+      spriteID: 57864fa964537524983686eb03aae901
+      internalID: -183953174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_124
+      name: KenAll_124
       rect:
         serializedVersion: 2
         x: 896
@@ -2735,14 +2735,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 437ac8f9070104c4cb574eeb6d797ae4
-      internalID: 595211214
+      spriteID: 69f0caf0f6a6ddb40b68e8a73aa8945f
+      internalID: -859274614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_125
+      name: KenAll_125
       rect:
         serializedVersion: 2
         x: 1024
@@ -2756,14 +2756,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ef42576193ed6549a3b465ce9536c98
-      internalID: -499297904
+      spriteID: e67e42e2981a1e44b89b83dd8a21c2ed
+      internalID: -290327024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_126
+      name: KenAll_126
       rect:
         serializedVersion: 2
         x: 1152
@@ -2777,14 +2777,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bf3fd4209a485848bba530da6798264
-      internalID: 1498556168
+      spriteID: 2d4bc143073002049974cfd7bf41ab3f
+      internalID: -746538380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_127
+      name: KenAll_127
       rect:
         serializedVersion: 2
         x: 1280
@@ -2798,14 +2798,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 001ec001a5af0c34fbeb093dce0fa4ba
-      internalID: 570809637
+      spriteID: ed2bfb832106b2f4fb44366b9ba46d92
+      internalID: -428656762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_128
+      name: KenAll_128
       rect:
         serializedVersion: 2
         x: 1408
@@ -2819,14 +2819,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2869653a822e30240ae19fe1d499c973
-      internalID: -2139369489
+      spriteID: 28f6a3d8a86ff1b48b18205de63e8211
+      internalID: 647033638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_129
+      name: KenAll_129
       rect:
         serializedVersion: 2
         x: 1536
@@ -2840,14 +2840,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbca8254a3acb7c448e3e48270ec76a0
-      internalID: -936443040
+      spriteID: 5abf26abdb5145f47b97cbea0b24ba78
+      internalID: 516153199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_130
+      name: KenAll_130
       rect:
         serializedVersion: 2
         x: 0
@@ -2861,14 +2861,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0d7e42d1c46cf54099adf6ba0d6afe3
-      internalID: -591358862
+      spriteID: ef8b8afe4f4f48f4a98bfa8d35071fde
+      internalID: 1835123171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_131
+      name: KenAll_131
       rect:
         serializedVersion: 2
         x: 128
@@ -2882,14 +2882,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d545f83096b667c46994d43a7d0bff19
-      internalID: -1311716071
+      spriteID: 5a58c53691bea714587ae7dac65617cb
+      internalID: 353431957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_132
+      name: KenAll_132
       rect:
         serializedVersion: 2
         x: 256
@@ -2903,14 +2903,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5969d6219be039b4189633e164ba92a8
-      internalID: 531109043
+      spriteID: f7959a6a88b58d546816ae45923b68c0
+      internalID: -554484148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_133
+      name: KenAll_133
       rect:
         serializedVersion: 2
         x: 384
@@ -2924,14 +2924,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fab7e5763d150da4aa8b54ffd79e6a2f
-      internalID: 141919215
+      spriteID: 10aab8036a9aa90469fc231a93527183
+      internalID: -1270791588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_134
+      name: KenAll_134
       rect:
         serializedVersion: 2
         x: 512
@@ -2945,14 +2945,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b408e5037481c5147ac0bdc851bde8d8
-      internalID: 719760918
+      spriteID: 2f44abe8c17261644836013d365db719
+      internalID: -1592051343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_135
+      name: KenAll_135
       rect:
         serializedVersion: 2
         x: 640
@@ -2966,14 +2966,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1e0bffe608b70e438ad5160afd4c8d6
-      internalID: -27311414
+      spriteID: 4c9ab1daa0ae84c41a3bd4044ce7b4d6
+      internalID: 2143098079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_136
+      name: KenAll_136
       rect:
         serializedVersion: 2
         x: 768
@@ -2987,14 +2987,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27c5343b34635fe448bd41b3c03369a7
-      internalID: -570503759
+      spriteID: 3ec75375a43e76348afb7002d2212bf3
+      internalID: -583385504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_137
+      name: KenAll_137
       rect:
         serializedVersion: 2
         x: 896
@@ -3008,14 +3008,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8876546a712eebb4eb0a846934243561
-      internalID: 2024649130
+      spriteID: 4329c315613e38b4ab8f43dbe3253e14
+      internalID: 429830094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_138
+      name: KenAll_138
       rect:
         serializedVersion: 2
         x: 1024
@@ -3029,14 +3029,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 341f0bf8147c1494cbf4b715888ad0e1
-      internalID: 90687522
+      spriteID: 1b8fa775fbccd9947a793be7b2390a65
+      internalID: -1536411150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_139
+      name: KenAll_139
       rect:
         serializedVersion: 2
         x: 1152
@@ -3050,14 +3050,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3186e7a70ae0a34c825e9c6914f9ed2
-      internalID: -306523724
+      spriteID: 46a425e70f8930743b7949fe2bf9541d
+      internalID: 255079113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_140
+      name: KenAll_140
       rect:
         serializedVersion: 2
         x: 1280
@@ -3071,14 +3071,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32fbc58dd9fcbe34d8124c88bc790a15
-      internalID: -1489341352
+      spriteID: 1a9bdabc069cb8c45932fb0ab01a6ed8
+      internalID: 995700295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_141
+      name: KenAll_141
       rect:
         serializedVersion: 2
         x: 1408
@@ -3092,14 +3092,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e831a5ab9e3d8cc4a8d12e9c56d0bc86
-      internalID: 755135328
+      spriteID: 44da12ef89c6aa04a90bb92aef58f3e5
+      internalID: -705969968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_142
+      name: KenAll_142
       rect:
         serializedVersion: 2
         x: 1536
@@ -3113,14 +3113,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c54b71db367c0a24ba6cd985473e6637
-      internalID: 236653564
+      spriteID: f233b907da27fe746bcccb4bd026d154
+      internalID: 1361276493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_143
+      name: KenAll_143
       rect:
         serializedVersion: 2
         x: 0
@@ -3134,14 +3134,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19443a061faa1fe439e8515fbe346714
-      internalID: -1104928632
+      spriteID: 655a7a3cd1ea4244992fc3741151cd7f
+      internalID: 657426807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_144
+      name: KenAll_144
       rect:
         serializedVersion: 2
         x: 128
@@ -3155,14 +3155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3948d3a36d4a9ef46bd0a3a761d67a4b
-      internalID: 1892705865
+      spriteID: ce86a42f9be38c94eba7e56ab69d61da
+      internalID: 1587966296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: holymoly_145
+      name: KenAll_145
       rect:
         serializedVersion: 2
         x: 256
@@ -3176,113 +3176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02d6658436646014284518850c213c3c
-      internalID: -645354527
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: holymoly_146
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26f17dcaf1181354eab9b70da903f715
-      internalID: 1513185881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: holymoly_147
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9f75dbbbb589e047a4311d2c07eb445
-      internalID: 958855120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: holymoly_148
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dec3d5c9d30f4f14fbeea420908f8365
-      internalID: 1211719766
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: holymoly_149
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0488f2b41e10244e9369a25c79603c9
-      internalID: -900189017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: holymoly_150
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95e4ad61b2b09d84394a5b3a80669321
-      internalID: 1156357513
+      spriteID: fa7f83a7bf4a5774289da14eee5c25bb
+      internalID: -2130656228
       vertices: []
       indices: 
       edges: []
@@ -3297,160 +3192,155 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures:
-    - texture: {fileID: 2800000, guid: 13b288a8ea43a884eab217cfa5cf1000, type: 3}
+    - texture: {fileID: 2800000, guid: 50311b738a3cf714f8d8693634771ec6, type: 3}
       name: Emission
     nameFileIdTable:
-      holymoly_0: -667588194
-      holymoly_1: -1082279131
-      holymoly_10: -708808318
-      holymoly_100: 841205897
-      holymoly_101: 1850304483
-      holymoly_102: 490320465
-      holymoly_103: 842587539
-      holymoly_104: 1071478429
-      holymoly_105: 1872931420
-      holymoly_106: -1695003342
-      holymoly_107: -721123587
-      holymoly_108: 1649601672
-      holymoly_109: -11562190
-      holymoly_11: -120834270
-      holymoly_110: 1464660430
-      holymoly_111: 1838111701
-      holymoly_112: 690867206
-      holymoly_113: -1966612030
-      holymoly_114: -792135060
-      holymoly_115: -1283026656
-      holymoly_116: -196547559
-      holymoly_117: -643972832
-      holymoly_118: -229906563
-      holymoly_119: 318448882
-      holymoly_12: -461402299
-      holymoly_120: -471596865
-      holymoly_121: 1389289404
-      holymoly_122: 326274137
-      holymoly_123: 1369808029
-      holymoly_124: 595211214
-      holymoly_125: -499297904
-      holymoly_126: 1498556168
-      holymoly_127: 570809637
-      holymoly_128: -2139369489
-      holymoly_129: -936443040
-      holymoly_13: 1806046666
-      holymoly_130: -591358862
-      holymoly_131: -1311716071
-      holymoly_132: 531109043
-      holymoly_133: 141919215
-      holymoly_134: 719760918
-      holymoly_135: -27311414
-      holymoly_136: -570503759
-      holymoly_137: 2024649130
-      holymoly_138: 90687522
-      holymoly_139: -306523724
-      holymoly_14: 1098715709
-      holymoly_140: -1489341352
-      holymoly_141: 755135328
-      holymoly_142: 236653564
-      holymoly_143: -1104928632
-      holymoly_144: 1892705865
-      holymoly_145: -645354527
-      holymoly_146: 1513185881
-      holymoly_147: 958855120
-      holymoly_148: 1211719766
-      holymoly_149: -900189017
-      holymoly_15: 139316598
-      holymoly_150: 1156357513
-      holymoly_16: 1288441872
-      holymoly_17: 1271776183
-      holymoly_18: 1154623399
-      holymoly_19: 1445603635
-      holymoly_2: -519593598
-      holymoly_20: 1447963297
-      holymoly_21: 1066171290
-      holymoly_22: -88446242
-      holymoly_23: -373019135
-      holymoly_24: 848443117
-      holymoly_25: -545462651
-      holymoly_26: -1945111326
-      holymoly_27: -410106003
-      holymoly_28: -1222278533
-      holymoly_29: 1285911765
-      holymoly_3: -124998930
-      holymoly_30: 1857432540
-      holymoly_31: -157834426
-      holymoly_32: 244347588
-      holymoly_33: -769907897
-      holymoly_34: 947584462
-      holymoly_35: -1918338957
-      holymoly_36: 1629246224
-      holymoly_37: 448128612
-      holymoly_38: -1900480521
-      holymoly_39: -1947773326
-      holymoly_4: -361307402
-      holymoly_40: 1793738978
-      holymoly_41: -726196885
-      holymoly_42: 1219281230
-      holymoly_43: 2006264343
-      holymoly_44: -217704915
-      holymoly_45: 1523308579
-      holymoly_46: -1500553583
-      holymoly_47: -940935446
-      holymoly_48: 1627792847
-      holymoly_49: -477279835
-      holymoly_5: 1579504489
-      holymoly_50: -314397257
-      holymoly_51: 1661285938
-      holymoly_52: 753460399
-      holymoly_53: -924805331
-      holymoly_54: 1255340926
-      holymoly_55: 1947197282
-      holymoly_56: 1555369145
-      holymoly_57: -1979812695
-      holymoly_58: -321520713
-      holymoly_59: -665968171
-      holymoly_6: 736942068
-      holymoly_60: 1794400585
-      holymoly_61: -140345491
-      holymoly_62: -1616146043
-      holymoly_63: 247897934
-      holymoly_64: 1082971619
-      holymoly_65: 1459395122
-      holymoly_66: 1960948267
-      holymoly_67: -1929842540
-      holymoly_68: -1219855444
-      holymoly_69: 1319753828
-      holymoly_7: -492415705
-      holymoly_70: 134660810
-      holymoly_71: 1992159845
-      holymoly_72: -1712137036
-      holymoly_73: 462954533
-      holymoly_74: -1504153427
-      holymoly_75: 1791678326
-      holymoly_76: -2090908446
-      holymoly_77: -1391592321
-      holymoly_78: -776223955
-      holymoly_79: 34620761
-      holymoly_8: -1584634547
-      holymoly_80: -1974923218
-      holymoly_81: -421577805
-      holymoly_82: 1119820043
-      holymoly_83: -811845971
-      holymoly_84: -1788183480
-      holymoly_85: 2034874041
-      holymoly_86: -2049988133
-      holymoly_87: 1697223198
-      holymoly_88: 352885999
-      holymoly_89: 613007137
-      holymoly_9: -1020514918
-      holymoly_90: 1391535550
-      holymoly_91: 302781559
-      holymoly_92: 683503494
-      holymoly_93: 1035366026
-      holymoly_94: 1037996209
-      holymoly_95: 355448505
-      holymoly_96: -576895329
-      holymoly_97: 376643385
-      holymoly_98: -202456488
-      holymoly_99: 481368620
+      KenAll_0: 746249981
+      KenAll_1: 2070748961
+      KenAll_10: 535337442
+      KenAll_100: -1734036700
+      KenAll_101: -607057741
+      KenAll_102: -564917232
+      KenAll_103: 1722994249
+      KenAll_104: -2007084355
+      KenAll_105: -2144516535
+      KenAll_106: -1981090028
+      KenAll_107: 259401408
+      KenAll_108: -320620423
+      KenAll_109: -1703394895
+      KenAll_11: -6478308
+      KenAll_110: 284102207
+      KenAll_111: 117588677
+      KenAll_112: 1600055257
+      KenAll_113: 99737428
+      KenAll_114: -1085634214
+      KenAll_115: 907919759
+      KenAll_116: 1437318580
+      KenAll_117: -1070781050
+      KenAll_118: 1719423860
+      KenAll_119: 1806420166
+      KenAll_12: -1200811473
+      KenAll_120: 1666901576
+      KenAll_121: -1287182254
+      KenAll_122: 1298555678
+      KenAll_123: -183953174
+      KenAll_124: -859274614
+      KenAll_125: -290327024
+      KenAll_126: -746538380
+      KenAll_127: -428656762
+      KenAll_128: 647033638
+      KenAll_129: 516153199
+      KenAll_13: 1313207632
+      KenAll_130: 1835123171
+      KenAll_131: 353431957
+      KenAll_132: -554484148
+      KenAll_133: -1270791588
+      KenAll_134: -1592051343
+      KenAll_135: 2143098079
+      KenAll_136: -583385504
+      KenAll_137: 429830094
+      KenAll_138: -1536411150
+      KenAll_139: 255079113
+      KenAll_14: 925832130
+      KenAll_140: 995700295
+      KenAll_141: -705969968
+      KenAll_142: 1361276493
+      KenAll_143: 657426807
+      KenAll_144: 1587966296
+      KenAll_145: -2130656228
+      KenAll_15: 1234836198
+      KenAll_16: 1639995839
+      KenAll_17: -87912795
+      KenAll_18: 660043588
+      KenAll_19: 1283790530
+      KenAll_2: -971330939
+      KenAll_20: 1887881097
+      KenAll_21: 680374118
+      KenAll_22: 1284791392
+      KenAll_23: 830491450
+      KenAll_24: 109460264
+      KenAll_25: -1950445350
+      KenAll_26: 293622557
+      KenAll_27: -1649933920
+      KenAll_28: -804458076
+      KenAll_29: -2110326011
+      KenAll_3: 759707464
+      KenAll_30: 1590669122
+      KenAll_31: 509472619
+      KenAll_32: 1562098418
+      KenAll_33: 851432651
+      KenAll_34: -59121215
+      KenAll_35: -1810282201
+      KenAll_36: 1529488810
+      KenAll_37: 686137363
+      KenAll_38: -1400700776
+      KenAll_39: -1776785860
+      KenAll_4: -244226316
+      KenAll_40: 1585372386
+      KenAll_41: -284818049
+      KenAll_42: -946506705
+      KenAll_43: 372365365
+      KenAll_44: 820124124
+      KenAll_45: -1824640967
+      KenAll_46: 1425677453
+      KenAll_47: 47969339
+      KenAll_48: -657882507
+      KenAll_49: 670308170
+      KenAll_5: 557111422
+      KenAll_50: -1466027077
+      KenAll_51: -829623296
+      KenAll_52: -1114898637
+      KenAll_53: -873367217
+      KenAll_54: 1063236004
+      KenAll_55: -1429650765
+      KenAll_56: -1781274681
+      KenAll_57: -791410159
+      KenAll_58: -1203456206
+      KenAll_59: -1970669702
+      KenAll_6: -449808539
+      KenAll_60: -1540536550
+      KenAll_61: 1215438986
+      KenAll_62: -1841754569
+      KenAll_63: -2076076101
+      KenAll_64: 643693154
+      KenAll_65: 2101257746
+      KenAll_66: -782103580
+      KenAll_67: -123162691
+      KenAll_68: 985271829
+      KenAll_69: 1216222061
+      KenAll_7: 2086058120
+      KenAll_70: 103818999
+      KenAll_71: 633365069
+      KenAll_72: -1661525903
+      KenAll_73: -860045514
+      KenAll_74: 1373490344
+      KenAll_75: 1470023472
+      KenAll_76: -1698959589
+      KenAll_77: 1865209967
+      KenAll_78: -1993757751
+      KenAll_79: 793093081
+      KenAll_8: -1226279763
+      KenAll_80: 382537165
+      KenAll_81: -772466689
+      KenAll_82: -1315334362
+      KenAll_83: -1869121390
+      KenAll_84: -343932425
+      KenAll_85: 2019389085
+      KenAll_86: -645325110
+      KenAll_87: -332214589
+      KenAll_88: -1567686281
+      KenAll_89: 832395774
+      KenAll_9: -1694993140
+      KenAll_90: -1902907510
+      KenAll_91: 1782588207
+      KenAll_92: 1453768937
+      KenAll_93: 1292587127
+      KenAll_94: -54862904
+      KenAll_95: 1861815773
+      KenAll_96: -1258044039
+      KenAll_97: 203690219
+      KenAll_98: 1286396762
+      KenAll_99: -1799954392
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
