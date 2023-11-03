@@ -30,10 +30,11 @@ public class PlayerCombatV2 : MonoBehaviour
     [SerializeField] private int maxWeaponCharge;
     public int weaponCharge;
     [SerializeField] private TextMeshProUGUI weaponText;
-    [SerializeField] private Slider weaponChargeSlider;
+    public Slider weaponChargeSlider;
     public bool isInWeaponTrigger;
     public GameObject weapon;
     [SerializeField] private GameObject boomerangPrefab;
+    public bool boomerangActive;
     //[SerializeField] private float boomerangOffset;
 
     [Header("Other:")]
@@ -262,8 +263,15 @@ public class PlayerCombatV2 : MonoBehaviour
 
     public void BoomerangAttack()
     {
-        GameObject boomerang = Instantiate(boomerangPrefab);
-        boomerang.transform.parent = gameObject.transform;
+        if (!boomerangActive)
+        {
+            GameObject boomerang = Instantiate(boomerangPrefab);
+            Boomerang boomerangScript = boomerang.GetComponent<Boomerang>();
+            boomerangScript.parentObject = gameObject.transform;
+            boomerangScript.parentCombat = this;
+            boomerangScript.ManualStart();
+            //boomerang.transform.parent = gameObject.transform;
+        }
         /*Vector2 startingPos = boomerang.transform.position;
         if (isFacingRight)
         {

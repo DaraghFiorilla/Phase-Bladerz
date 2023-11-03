@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class Boomerang : MonoBehaviour
 {
-    private PlayerCombatV2 parentCombat;
+    public PlayerCombatV2 parentCombat;
     [SerializeField] private float boomerangOffset;
-    private Transform parentObject;
+    public Transform parentObject;
     private PlayerCombatV2 enemyCombat;
     [SerializeField] private int boomerangDamage;
     private Vector3 startingPos, targetPos;
     private bool targetReached;
+    //private float timer = 5;
 
-    // Start is called before the first frame update
     void Start()
     {
-        parentCombat = GetComponentInParent<PlayerCombatV2>();
-        parentObject = gameObject.transform.parent;
+        
+    }
+
+    public void ManualStart()
+    {
+        //parentCombat = GetComponentInParent<PlayerCombatV2>();
+        //parentObject = gameObject.transform.parent;
+        parentCombat.boomerangActive = true;
         gameObject.transform.position = parentObject.transform.position;
         startingPos = gameObject.transform.position;
         if (parentCombat.isFacingRight)
@@ -29,29 +35,32 @@ public class Boomerang : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //timer -= Time.deltaTime;
         if (gameObject.transform.position != targetPos && !targetReached)
         {
-            Debug.Log("gameObject.transform.position != targetPos");
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, targetPos, 0.01f);
+            //Debug.Log("gameObject.transform.position != targetPos");
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, targetPos, 0.02f);
         }
         else if (gameObject.transform.position == targetPos && !targetReached)
         {
-            Debug.Log("gameObject.transform.position == targetPos");
+            //Debug.Log("gameObject.transform.position == targetPos");
             targetReached = true;
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, startingPos, 0.01f);
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, startingPos, 0.02f);
         }
-        else if (/*gameObject.transform.position != targetPos &&*/ targetReached)
+        else if (gameObject.transform.position != targetPos && targetReached)
         {
-            Debug.Log("gameObject.transform.position != targetPos && targetReached");
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, startingPos, 0.01f);
+            //Debug.Log("gameObject.transform.position != targetPos && targetReached");
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, startingPos, 0.02f);
         }
-        else if (gameObject.transform.position == startingPos && targetReached)
+
+        if (gameObject.transform.position == startingPos && targetReached)
         {
-            Debug.Log("transform.position == startingPos && targetReached");
+            //Debug.Log("transform.position == startingPos && targetReached");
             parentCombat.weaponCharge--;
+            parentCombat.weaponChargeSlider.value = parentCombat.weaponCharge;
+            parentCombat.boomerangActive = false;
             Destroy(gameObject);
         }
         gameObject.transform.Rotate(0, 0, Time.deltaTime * 500);
@@ -59,7 +68,7 @@ public class Boomerang : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && other.gameObject != parentObject)
+        if (other.CompareTag("Player") && other.gameObject.transform != parentObject.transform)
         {
             enemyCombat = other.GetComponent<PlayerCombatV2>();
             enemyCombat.DamagePlayer(gameObject, boomerangDamage);
