@@ -42,7 +42,7 @@ public class PlayerCombatV2 : MonoBehaviour
     private PlayerMovementV2 playerMovement;
     private Animator animator;
     [SerializeField] private InputActionReference attack;
-    [SerializeField] private bool isMiku;
+    //[SerializeField] private bool isMiku;
     private SimpleFlash hitFlash;
     public bool isFacingRight;
     private ScreenShake screenShake;
@@ -72,14 +72,14 @@ public class PlayerCombatV2 : MonoBehaviour
         hitFlash = gameObject.GetComponent<SimpleFlash>();
         screenShake = FindObjectOfType<ScreenShake>();
 
-        if (isMiku)
+        /*if (isMiku)
         {
             animator.SetBool("scythe", true);
         }
         else
         {
             animator.SetBool("sword", true);
-        }
+        }*/
     }
 
     // Update is called once per frame
@@ -164,20 +164,10 @@ public class PlayerCombatV2 : MonoBehaviour
             default:
                 {
                     attackPower = 4;
-                    if (isMiku)
-                    {
-                        animator.SetBool("katana", false);
-                        animator.SetBool("scythe", true);
-                        animator.SetBool("boomerang", false);
-                        animator.SetBool("sword", false);
-                    }
-                    else
-                    {
-                        animator.SetBool("katana", false);
-                        animator.SetBool("scythe", false);
-                        animator.SetBool("boomerang", false);
-                        animator.SetBool("sword", false);
-                    }
+                    animator.SetBool("katana", false);
+                    animator.SetBool("scythe", false);
+                    animator.SetBool("boomerang", false);
+                    animator.SetBool("sword", false);
                     //attackCooldown = 0.5f;
                     break;
                 }
@@ -197,20 +187,14 @@ public class PlayerCombatV2 : MonoBehaviour
         weaponChargeSlider.value = weaponCharge;
         weaponChargeSlider.enabled = false;
 
-        if (isMiku)
-        {
-            animator.SetBool("katana", false);
-            animator.SetBool("scythe", true);
-            animator.SetBool("boomerang", false);
-            animator.SetBool("sword", false);
-        }
-        else
-        {
-            animator.SetBool("katana", false);
-            animator.SetBool("scythe", false);
-            animator.SetBool("boomerang", false);
-            animator.SetBool("sword", false);
-        }
+        animator.SetBool("katana", false);
+        animator.SetBool("scythe", false);
+        animator.SetBool("boomerang", false);
+        animator.SetBool("sword", false);
+        animator.SetBool("katana", false);
+        animator.SetBool("scythe", false);
+        animator.SetBool("boomerang", false);
+        animator.SetBool("sword", false);
     }
 
     private void OnDrawGizmosSelected()
