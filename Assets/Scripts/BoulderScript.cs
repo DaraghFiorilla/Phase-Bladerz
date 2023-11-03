@@ -18,7 +18,7 @@ public class BoulderScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - boulderSpeed);
+        gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - boulderSpeed * Time.deltaTime);
 
         if (gameObject.transform.position.y <= -5)
         {

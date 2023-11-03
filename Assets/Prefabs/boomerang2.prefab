@@ -102,6 +102,7 @@ MonoBehaviour:
   boomerangOffset: 5
   parentObject: {fileID: 0}
   boomerangDamage: 6
+  boomerangSpeed: 8
 --- !u!61 &3820733035335523872
 BoxCollider2D:
   m_ObjectHideFlags: 0

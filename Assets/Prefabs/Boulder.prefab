@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26bcb6d02c770f4bb36761435645869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boulderSpeed: 0.005
+  boulderSpeed: 2.5
   boulderDamage: 5
 --- !u!50 &274022926233642784
 Rigidbody2D:

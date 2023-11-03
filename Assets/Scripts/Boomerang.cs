@@ -11,6 +11,7 @@ public class Boomerang : MonoBehaviour
     [SerializeField] private int boomerangDamage;
     private Vector3 startingPos, targetPos;
     private bool targetReached;
+    public float boomerangSpeed;
     //private float timer = 5;
 
     void Start()
@@ -41,18 +42,18 @@ public class Boomerang : MonoBehaviour
         if (gameObject.transform.position != targetPos && !targetReached)
         {
             //Debug.Log("gameObject.transform.position != targetPos");
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, targetPos, 0.02f);
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, targetPos, boomerangSpeed * Time.deltaTime);
         }
         else if (gameObject.transform.position == targetPos && !targetReached)
         {
             //Debug.Log("gameObject.transform.position == targetPos");
             targetReached = true;
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, startingPos, 0.02f);
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, startingPos, boomerangSpeed * Time.deltaTime);
         }
         else if (gameObject.transform.position != targetPos && targetReached)
         {
             //Debug.Log("gameObject.transform.position != targetPos && targetReached");
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, startingPos, 0.02f);
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, startingPos, boomerangSpeed * Time.deltaTime);
         }
 
         if (gameObject.transform.position == startingPos && targetReached)
