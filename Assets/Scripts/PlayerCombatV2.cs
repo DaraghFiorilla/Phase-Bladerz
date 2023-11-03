@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms;
-
+using BarthaSzabolcs.Tutorial_SpriteFlash;
 
 public class PlayerCombatV2 : MonoBehaviour
 {
@@ -23,6 +23,7 @@ public class PlayerCombatV2 : MonoBehaviour
     //public bool canAttack;
     [SerializeField] private Transform raycastOrigin;
     [SerializeField] private float radius;
+    //public bool isInvincible;
 
     [Header("Weapon Variables:")]
     public bool weaponEquipped;
@@ -39,6 +40,7 @@ public class PlayerCombatV2 : MonoBehaviour
     private Animator animator;
     [SerializeField] private InputActionReference attack;
     [SerializeField] private bool isMiku;
+    private SimpleFlash hitFlash;
 
     public enum WeaponType
     {
@@ -62,6 +64,7 @@ public class PlayerCombatV2 : MonoBehaviour
         rb = gameObject.GetComponentInParent<Rigidbody2D>();
         weaponChargeSlider.maxValue = maxWeaponCharge;
         weaponChargeSlider.value = 0;
+        hitFlash = gameObject.GetComponent<SimpleFlash>();
 
         if (isMiku)
         {
@@ -95,6 +98,7 @@ public class PlayerCombatV2 : MonoBehaviour
                 }
                 else // attack
                 {
+                    //isInvincible = false;
                     animator.SetTrigger("attack");
                 }
             }
@@ -228,18 +232,22 @@ public class PlayerCombatV2 : MonoBehaviour
 
     public void DamagePlayer(GameObject sender, int damage)
     {
-        playerHealth -= damage;
-        healthSlider.value = playerHealth;
-        if (playerHealth <= 0)
-        {
-            gameObject.SetActive(false);
-        }
+        //if (!isInvincible)
+        //{ 
+            playerHealth -= damage;
+            healthSlider.value = playerHealth;
+            if (playerHealth <= 0)
+            {
+                gameObject.SetActive(false);
+            }
 
-        StopAllCoroutines();
-        playerMovement.knockbackActive = true;
-        Vector2 direction = (transform.position - sender.transform.position).normalized;
-        rb.AddForce(direction * knockbackStrength, ForceMode2D.Impulse);
-        StartCoroutine(KnockbackReset());
+            hitFlash.Flash();
+            StopAllCoroutines();
+            playerMovement.knockbackActive = true;
+            Vector2 direction = (transform.position - sender.transform.position).normalized;
+            rb.AddForce(direction * knockbackStrength, ForceMode2D.Impulse);
+            StartCoroutine(KnockbackReset());
+        //}
     }
 
     private IEnumerator KnockbackReset()
