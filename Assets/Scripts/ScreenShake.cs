@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class ScreenShake : MonoBehaviour
 {
-    [SerializeField] private float duration;
-    [SerializeField] private float strength;
-    public bool startShaking;
-
+    public bool startShake;
+    [SerializeField] float duration;
+    [SerializeField] float strength;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,22 +16,26 @@ public class ScreenShake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (startShaking)
+        if (startShake)
         {
-            startShaking = false;
+            startShake = false;
             StartCoroutine(Shake());
         }
     }
 
     IEnumerator Shake()
     {
-        Vector2 startPos = transform.position;
+        Vector3 startPos = transform.position;
         float elapsedTime = 0f;
 
         while (elapsedTime < duration)
         {
-            elapsedTime += Time.deltaTime;
-            transform.position = startPos + Random.insideUnitCircle * strength;
+            transform.position = startPos + Random.insideUnitSphere * strength;
+            if (transform.position.z >= -1)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+            }
+            elapsedTime+= Time.deltaTime;
             yield return null;
         }
 

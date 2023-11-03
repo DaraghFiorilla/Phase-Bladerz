@@ -45,6 +45,7 @@ public class PlayerCombatV2 : MonoBehaviour
     [SerializeField] private bool isMiku;
     private SimpleFlash hitFlash;
     public bool isFacingRight;
+    private ScreenShake screenShake;
 
     public enum WeaponType
     {
@@ -69,6 +70,7 @@ public class PlayerCombatV2 : MonoBehaviour
         weaponChargeSlider.maxValue = maxWeaponCharge;
         weaponChargeSlider.value = 0;
         hitFlash = gameObject.GetComponent<SimpleFlash>();
+        screenShake = FindObjectOfType<ScreenShake>();
 
         if (isMiku)
         {
@@ -238,6 +240,7 @@ public class PlayerCombatV2 : MonoBehaviour
     {
         //if (!isInvincible)
         //{ 
+            screenShake.startShake = true;
             playerHealth -= damage;
             healthSlider.value = playerHealth;
             if (playerHealth <= 0)
