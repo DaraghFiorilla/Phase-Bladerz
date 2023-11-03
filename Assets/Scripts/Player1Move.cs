@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovementV2 : MonoBehaviour
+public class Player1Move : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Vector2 horizontalMovement;
     [SerializeField] private float maxSpeed = 5f;//, acceleration = 50f, deacceleration = 100f;
     private float currentSpeed;
-    [Tooltip("How much the player's speed is divided by while attacking")][SerializeField] private float attackSpeedDivider;
+    [Tooltip("How much the player's speed is divided by while attacking")] [SerializeField] private float attackSpeedDivider;
     //private float currentSpeed = 0f;
     //private Vector2 oldMovement;
     [SerializeField] private float jumpForce = 5f;
@@ -21,7 +21,7 @@ public class PlayerMovementV2 : MonoBehaviour
     private Animator animator;
     public bool knockbackActive;
     public bool attacking;
-    private PlayerCombatV2 playerCombat;
+    private Player1Combat playerCombat;
 
     void Start()
     {
@@ -29,11 +29,35 @@ public class PlayerMovementV2 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         currentSpeed = maxSpeed;
-        playerCombat = GetComponent<PlayerCombatV2>();
+        playerCombat = GetComponent<Player1Combat>();
     }
 
     private void FixedUpdate()
     {
+
+
+        Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        input = input.normalized;
+
+
+        if (Input.GetKeyDown("space"))
+        {
+            jumped = true;
+        }
+
+
+
+        if (input.x > 0)
+        {
+            gameObject.transform.localScale = Vector3.one;
+            playerCombat.isFacingRight = true;
+        }
+        else if (input.x < 0)
+        {
+            gameObject.transform.localScale = new Vector3(-1, 1, 1);
+            playerCombat.isFacingRight = false;
+        }
+
 
         /*if (horizontalMovement.magnitude > 0 && currentSpeed >= 0) // MOVEMENT SHIT - FUCKS WITH THE JUMP THOUGH
         {
@@ -49,8 +73,8 @@ public class PlayerMovementV2 : MonoBehaviour
 
         if (!knockbackActive)
         {
-            rb.velocity = new Vector2(horizontalMovement.x * currentSpeed, rb.velocity.y); // BASIC MOVEMENT
-            animator.SetFloat("speed", Mathf.Abs(horizontalMovement.x));
+            rb.velocity = new Vector2(input.x * currentSpeed, rb.velocity.y); // BASIC MOVEMENT
+            animator.SetFloat("speed", Mathf.Abs(input.x));
         }
 
         /*if (rb.velocity.x < 0) // FLIPS PLAYER TO LEFT FACING - THIS SHOULD BE BASED ON PLAYER INPUT NOT VELOCITY DUE TO KNOCKBACK. MOVE THIS TO ONMOVE()
@@ -70,6 +94,7 @@ public class PlayerMovementV2 : MonoBehaviour
                 doubleJumped = false;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 JumpSoundEffect.Play();
+                jumped = false;
             }
             else if (!IsGrounded() && !doubleJumped) // DOUBLE JUMP
             {
@@ -83,7 +108,7 @@ public class PlayerMovementV2 : MonoBehaviour
 
         animator.SetFloat("yvelocity", rb.velocity.y);
     }
-    
+
     public void OnMove(InputAction.CallbackContext context) // CALLED WHENEVER PLAYER MOVES
     {
         horizontalMovement = context.ReadValue<Vector2>();

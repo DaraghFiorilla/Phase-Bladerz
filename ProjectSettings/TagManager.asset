@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Damaging
   - Background
+  - Player2
   layers:
   - Default
   - TransparentFX

@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms;
 using BarthaSzabolcs.Tutorial_SpriteFlash;
 
-public class PlayerCombatV2 : MonoBehaviour
+public class Player1Combat : MonoBehaviour
 {
     [Header("Health Variables:")]
     private int maxHealth = 100;
@@ -19,7 +19,7 @@ public class PlayerCombatV2 : MonoBehaviour
     [SerializeField] private int attackPower;
     [SerializeField] private float knockbackStrength;
     [SerializeField] private float knockbackDelay;
-     [SerializeField] private AudioSource HitSoundEffect;
+    [SerializeField] private AudioSource HitSoundEffect;
     //public bool canAttack;
     [SerializeField] private Transform raycastOrigin;
     [SerializeField] private float radius;
@@ -39,7 +39,7 @@ public class PlayerCombatV2 : MonoBehaviour
 
     [Header("Other:")]
     private Rigidbody2D rb;
-    private PlayerMovementV2 playerMovement;
+    private Player1Move playerMovement;
     private Animator animator;
     [SerializeField] private InputActionReference attack;
     //[SerializeField] private bool isMiku;
@@ -62,7 +62,7 @@ public class PlayerCombatV2 : MonoBehaviour
         healthSlider.maxValue = maxHealth;
         playerHealth = maxHealth;
         healthSlider.value = playerHealth;
-        playerMovement = gameObject.GetComponent<PlayerMovementV2>();
+        playerMovement = gameObject.GetComponent<Player1Move>();
         attackPower = 4;
         //attackCooldown = 0.5f;
         weaponText.text = "Active weapon =  NONE";
@@ -92,6 +92,23 @@ public class PlayerCombatV2 : MonoBehaviour
         }
 
 
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            if (!playerMovement.attacking)
+            {
+                if (isInWeaponTrigger && !weaponEquipped) // pick up weapon
+                {
+                    weapon.GetComponent<WeaponScript>().EquipWeapon2();
+                }
+                else // attack
+                {
+                    //isInvincible = false;
+                    animator.SetTrigger("attack");
+                }
+            }
+        }
+
+
     }
 
     public void OnAttack(InputAction.CallbackContext context)
@@ -102,7 +119,7 @@ public class PlayerCombatV2 : MonoBehaviour
             {
                 if (isInWeaponTrigger && !weaponEquipped) // pick up weapon
                 {
-                    weapon.GetComponent<WeaponScript>().EquipWeapon();
+                    weapon.GetComponent<WeaponScript>().EquipWeapon2();
                 }
                 else // attack
                 {
@@ -211,11 +228,11 @@ public class PlayerCombatV2 : MonoBehaviour
         Debug.Log("Detect colliders run");
         foreach (Collider2D collider in Physics2D.OverlapCircleAll(raycastOrigin.position, radius))
         {
-            if (collider.CompareTag("Player2") && collider.gameObject != gameObject)
+            if (collider.CompareTag("Player") && collider.gameObject != gameObject)
             {
                 Debug.Log("Player hit");
                 HitSoundEffect.Play();
-                collider.gameObject.GetComponent<Player1Combat>().DamagePlayer(gameObject, attackPower);
+                collider.gameObject.GetComponent<PlayerCombatV2>().DamagePlayer(gameObject, attackPower);
                 weaponCharge--;
                 weaponChargeSlider.value = weaponCharge;
             }
@@ -226,20 +243,20 @@ public class PlayerCombatV2 : MonoBehaviour
     {
         //if (!isInvincible)
         //{ 
-            screenShake.startShake = true;
-            playerHealth -= damage;
-            healthSlider.value = playerHealth;
-            if (playerHealth <= 0)
-            {
-                gameObject.SetActive(false);
-            }
+        screenShake.startShake = true;
+        playerHealth -= damage;
+        healthSlider.value = playerHealth;
+        if (playerHealth <= 0)
+        {
+            gameObject.SetActive(false);
+        }
 
-            hitFlash.Flash();
-            StopAllCoroutines();
-            playerMovement.knockbackActive = true;
-            Vector2 direction = (transform.position - sender.transform.position).normalized;
-            rb.AddForce(direction * knockbackStrength, ForceMode2D.Impulse);
-            StartCoroutine(KnockbackReset());
+        hitFlash.Flash();
+        StopAllCoroutines();
+        playerMovement.knockbackActive = true;
+        Vector2 direction = (transform.position - sender.transform.position).normalized;
+        rb.AddForce(direction * knockbackStrength, ForceMode2D.Impulse);
+        StartCoroutine(KnockbackReset());
         //}
     }
 
@@ -257,7 +274,7 @@ public class PlayerCombatV2 : MonoBehaviour
             GameObject boomerang = Instantiate(boomerangPrefab);
             Boomerang boomerangScript = boomerang.GetComponent<Boomerang>();
             boomerangScript.parentObject = gameObject.transform;
-            boomerangScript.parentCombat = this;
+       //     boomerangScript.parentCombat = this;
             boomerangScript.ManualStart();
             //boomerang.transform.parent = gameObject.transform;
         }

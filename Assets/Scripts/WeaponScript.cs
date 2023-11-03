@@ -9,8 +9,10 @@ public class WeaponScript : MonoBehaviour
     private SpawnWeapon weaponManager;
     [SerializeField] private WeaponScriptType weaponScriptType;
     //private bool playerInTrigger;
+    private GameObject playerObject1;
     private GameObject playerObject;
     private PlayerCombatV2 playerCombat;
+    private Player1Combat playerCombat1;
     [Tooltip("Add sprites in order: Katana, Boomerang, Axe, Scythe")]public Sprite[] spriteList = new Sprite[4];
     private SpriteRenderer spriteRenderer;
 
@@ -77,10 +79,39 @@ public class WeaponScript : MonoBehaviour
 
         Destroy(gameObject.transform.parent.gameObject);
     }
+    public void EquipWeapon2()
+    {
+        weaponManager.activeWeaponCount--;
+        switch (weaponScriptType)
+        {
+            case WeaponScriptType.Katana:
+                {
+                    playerCombat1.SetWeapon(Player1Combat.WeaponType.Katana);
+                    break;
+                }
+            case WeaponScriptType.Sword:
+                {
+                    playerCombat1.SetWeapon(Player1Combat.WeaponType.Sword);
+                    break;
+                }
+            case WeaponScriptType.Scythe:
+                {
+                    playerCombat1.SetWeapon(Player1Combat.WeaponType.Scythe);
+                    break;
+                }
+            default:
+                {
+                    // PANIC
+                    break;
+                }
 
+        }
+
+        Destroy(gameObject.transform.parent.gameObject);
+    }
     private void GetRandomWeaponType()
     {
-        int randomInt = Random.Range(1, 5);
+        int randomInt = Random.Range(1, 4);
         switch (randomInt)
         {
             case 1:
@@ -91,20 +122,14 @@ public class WeaponScript : MonoBehaviour
                 }
             case 2:
                 {
-                    weaponScriptType = WeaponScriptType.Boomerang;
+                    weaponScriptType = WeaponScriptType.Sword;
                     spriteRenderer.sprite = spriteList[1];
                     break;
                 }
             case 3:
                 {
-                    weaponScriptType = WeaponScriptType.Sword;
-                    spriteRenderer.sprite = spriteList[2];
-                    break;
-                }
-            case 4:
-                {
                     weaponScriptType = WeaponScriptType.Scythe;
-                    spriteRenderer.sprite = spriteList[3];
+                    spriteRenderer.sprite = spriteList[2];
                     break;
                 }
             default:
@@ -119,6 +144,14 @@ public class WeaponScript : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        if (other.CompareTag("Player2"))
+        {
+            playerObject1 = other.gameObject;
+            playerCombat1 = other.GetComponent<Player1Combat>();
+            //playerInTrigger = true;
+            playerCombat1.isInWeaponTrigger = true;
+            playerCombat1.weapon = gameObject;
+        }
         if (other.CompareTag("Player"))
         {
             playerObject = other.gameObject;
@@ -131,11 +164,23 @@ public class WeaponScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        playerCombat = other.gameObject.GetComponent<PlayerCombatV2>();
-        playerCombat.isInWeaponTrigger = false;
-        playerCombat.weapon = null;
-        //playerInTrigger = false;
-        playerObject = null;
-        playerCombat = null;
+        if (other.CompareTag("Player2"))
+        {
+            playerCombat1 = other.gameObject.GetComponent<Player1Combat>();
+            playerCombat1.isInWeaponTrigger = false;
+            playerCombat1.weapon = null;
+            //playerInTrigger = false;
+            playerObject1 = null;
+            playerCombat1 = null;
+        }
+        if (other.CompareTag("Player"))
+        {
+            playerCombat = other.gameObject.GetComponent<PlayerCombatV2>();
+            playerCombat.isInWeaponTrigger = false;
+            playerCombat.weapon = null;
+            //playerInTrigger = false;
+            playerObject = null;
+            playerCombat = null;
+        }
     }
 }
