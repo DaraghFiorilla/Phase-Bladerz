@@ -16,6 +16,9 @@ namespace BarthaSzabolcs.Tutorial_SpriteFlash
         [Tooltip("Duration of the flash.")]
         [SerializeField] private float duration;
 
+        [Tooltip("Amount of flashes")]
+        [SerializeField] private float numOfFlashes;
+
         #endregion
         #region Private Fields
 
@@ -27,6 +30,8 @@ namespace BarthaSzabolcs.Tutorial_SpriteFlash
 
         // The currently running coroutine.
         private Coroutine flashRoutine;
+
+        private PlayerCombatV2 playerCombat;
 
         #endregion
 
@@ -46,6 +51,8 @@ namespace BarthaSzabolcs.Tutorial_SpriteFlash
             // Get the material that the SpriteRenderer uses, 
             // so we can switch back to it after the flash ended.
             originalMaterial = spriteRenderer.material;
+
+            playerCombat = GetComponent<PlayerCombatV2>();
         }
 
         #endregion
@@ -66,15 +73,22 @@ namespace BarthaSzabolcs.Tutorial_SpriteFlash
 
         private IEnumerator FlashRoutine()
         {
-            // Swap to the flashMaterial.
-            spriteRenderer.material = flashMaterial;
+            for (int i = 0; i < numOfFlashes; i++)
+            {
+                //playerCombat.isInvincible = true;
+                // Swap to the flashMaterial.
+                spriteRenderer.material = flashMaterial;
 
-            // Pause the execution of this function for "duration" seconds.
-            yield return new WaitForSeconds(duration);
+                // Pause the execution of this function for "duration" seconds.
+                yield return new WaitForSeconds(duration);
 
-            // After the pause, swap back to the original material.
-            spriteRenderer.material = originalMaterial;
+                // After the pause, swap back to the original material.
+                spriteRenderer.material = originalMaterial;
 
+                yield return new WaitForSeconds(duration);
+            }
+
+            //playerCombat.isInvincible = false;
             // Set the routine to null, signaling that it's finished.
             flashRoutine = null;
         }

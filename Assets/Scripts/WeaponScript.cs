@@ -8,7 +8,7 @@ public class WeaponScript : MonoBehaviour
 {
     private SpawnWeapon weaponManager;
     [SerializeField] private WeaponScriptType weaponScriptType;
-    private bool playerInTrigger;
+    //private bool playerInTrigger;
     private GameObject playerObject;
     private PlayerCombatV2 playerCombat;
     [Tooltip("Add sprites in order: Katana, Boomerang, Axe, Scythe")]public Sprite[] spriteList = new Sprite[4];
@@ -123,7 +123,7 @@ public class WeaponScript : MonoBehaviour
         {
             playerObject = other.gameObject;
             playerCombat = other.GetComponent<PlayerCombatV2>();
-            playerInTrigger = true;
+            //playerInTrigger = true;
             playerCombat.isInWeaponTrigger = true;
             playerCombat.weapon = gameObject;
         }
@@ -134,7 +134,7 @@ public class WeaponScript : MonoBehaviour
         playerCombat = other.gameObject.GetComponent<PlayerCombatV2>();
         playerCombat.isInWeaponTrigger = false;
         playerCombat.weapon = null;
-        playerInTrigger = false;
+        //playerInTrigger = false;
         playerObject = null;
         playerCombat = null;
     }

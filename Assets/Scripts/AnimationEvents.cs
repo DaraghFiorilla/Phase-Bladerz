@@ -8,10 +8,16 @@ public class AnimationEvents : MonoBehaviour
     public UnityEvent OnAttackPerformed;
     public UnityEvent SetAttackingSpeedPos;
     public UnityEvent SetAttackingSpeedNeg;
+    public UnityEvent OnBoomerang;
 
     public void TriggerAttack()
     {
         OnAttackPerformed?.Invoke();
+    }
+
+    public void InvokeBoomerangAttack()
+    {
+        OnBoomerang?.Invoke();
     }
 
     public void SwitchAttackingSpeedPos()

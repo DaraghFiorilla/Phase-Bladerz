@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6964748601669333094}
   - component: {fileID: 4859195827483654643}
   - component: {fileID: 4859195827483654646}
+  - component: {fileID: 8674399400636294442}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -122,8 +123,10 @@ MonoBehaviour:
   weaponChargeSlider: {fileID: 0}
   isInWeaponTrigger: 0
   weapon: {fileID: 0}
+  boomerangPrefab: {fileID: 4096353010808305674, guid: 033ea6c7dfefe0f4ab76c34f3d8f4435, type: 3}
   attack: {fileID: 0}
   isMiku: 0
+  isFacingRight: 0
 --- !u!212 &4859195827483654644
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -233,6 +236,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnBoomerang:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4179705348621997218}
+        m_TargetAssemblyTypeName: PlayerCombatV2, Assembly-CSharp
+        m_MethodName: BoomerangAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &6964748601669333094
 Animator:
   serializedVersion: 5
@@ -301,6 +319,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8674399400636294442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4859195827483654642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61235ad0b8bec784fb54d86e88a1b833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: d1d89a386b525f14c875a359b5605148, type: 2}
+  duration: 0.25
+  numOfFlashes: 2
 --- !u!1 &4859195827878376613
 GameObject:
   m_ObjectHideFlags: 0

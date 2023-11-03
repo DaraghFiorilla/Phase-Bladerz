@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms;
-
+using BarthaSzabolcs.Tutorial_SpriteFlash;
 
 public class PlayerCombatV2 : MonoBehaviour
 {
@@ -23,15 +23,19 @@ public class PlayerCombatV2 : MonoBehaviour
     //public bool canAttack;
     [SerializeField] private Transform raycastOrigin;
     [SerializeField] private float radius;
+    //public bool isInvincible;
 
     [Header("Weapon Variables:")]
     public bool weaponEquipped;
     [SerializeField] private int maxWeaponCharge;
-    private int weaponCharge;
+    public int weaponCharge;
     [SerializeField] private TextMeshProUGUI weaponText;
-    [SerializeField] private Slider weaponChargeSlider;
+    public Slider weaponChargeSlider;
     public bool isInWeaponTrigger;
     public GameObject weapon;
+    [SerializeField] private GameObject boomerangPrefab;
+    public bool boomerangActive;
+    //[SerializeField] private float boomerangOffset;
 
     [Header("Other:")]
     private Rigidbody2D rb;
@@ -39,6 +43,8 @@ public class PlayerCombatV2 : MonoBehaviour
     private Animator animator;
     [SerializeField] private InputActionReference attack;
     [SerializeField] private bool isMiku;
+    private SimpleFlash hitFlash;
+    public bool isFacingRight;
 
     public enum WeaponType
     {
@@ -62,6 +68,7 @@ public class PlayerCombatV2 : MonoBehaviour
         rb = gameObject.GetComponentInParent<Rigidbody2D>();
         weaponChargeSlider.maxValue = maxWeaponCharge;
         weaponChargeSlider.value = 0;
+        hitFlash = gameObject.GetComponent<SimpleFlash>();
 
         if (isMiku)
         {
@@ -95,6 +102,7 @@ public class PlayerCombatV2 : MonoBehaviour
                 }
                 else // attack
                 {
+                    //isInvincible = false;
                     animator.SetTrigger("attack");
                 }
             }
@@ -228,18 +236,22 @@ public class PlayerCombatV2 : MonoBehaviour
 
     public void DamagePlayer(GameObject sender, int damage)
     {
-        playerHealth -= damage;
-        healthSlider.value = playerHealth;
-        if (playerHealth <= 0)
-        {
-            gameObject.SetActive(false);
-        }
+        //if (!isInvincible)
+        //{ 
+            playerHealth -= damage;
+            healthSlider.value = playerHealth;
+            if (playerHealth <= 0)
+            {
+                gameObject.SetActive(false);
+            }
 
-        StopAllCoroutines();
-        playerMovement.knockbackActive = true;
-        Vector2 direction = (transform.position - sender.transform.position).normalized;
-        rb.AddForce(direction * knockbackStrength, ForceMode2D.Impulse);
-        StartCoroutine(KnockbackReset());
+            hitFlash.Flash();
+            StopAllCoroutines();
+            playerMovement.knockbackActive = true;
+            Vector2 direction = (transform.position - sender.transform.position).normalized;
+            rb.AddForce(direction * knockbackStrength, ForceMode2D.Impulse);
+            StartCoroutine(KnockbackReset());
+        //}
     }
 
     private IEnumerator KnockbackReset()
@@ -247,5 +259,34 @@ public class PlayerCombatV2 : MonoBehaviour
         yield return new WaitForSeconds(knockbackDelay);
         rb.velocity = Vector2.zero;
         playerMovement.knockbackActive = false;
+    }
+
+    public void BoomerangAttack()
+    {
+        if (!boomerangActive)
+        {
+            GameObject boomerang = Instantiate(boomerangPrefab);
+            Boomerang boomerangScript = boomerang.GetComponent<Boomerang>();
+            boomerangScript.parentObject = gameObject.transform;
+            boomerangScript.parentCombat = this;
+            boomerangScript.ManualStart();
+            //boomerang.transform.parent = gameObject.transform;
+        }
+        /*Vector2 startingPos = boomerang.transform.position;
+        if (isFacingRight)
+        {
+            Vector2 targetPos = new Vector2(startingPos.x + boomerangOffset, startingPos.y);
+            boomerang.transform.position = Vector2.MoveTowards(startingPos, targetPos, Time.deltaTime * 40);
+        }
+        else
+        {
+            Vector2 targetPos = new Vector2(startingPos.x - boomerangOffset, startingPos.y);
+            boomerang.transform.position = Vector2.MoveTowards(startingPos, targetPos, Time.deltaTime * 40);
+        }
+
+        while (boomerang != null)
+        {
+            boomerang.transform.Rotate(0, Time.deltaTime * 500, 0);
+        }*/
     }
 }
