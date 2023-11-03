@@ -22,6 +22,7 @@ public class PlayerMovementV2 : MonoBehaviour
     [SerializeField] private InputActionReference movement, jump;
     public bool knockbackActive;
     public bool attacking;
+    private PlayerCombatV2 playerCombat;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class PlayerMovementV2 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         currentSpeed = maxSpeed;
+        playerCombat = GetComponent<PlayerCombatV2>();
     }
 
     private void FixedUpdate()
@@ -88,10 +90,12 @@ public class PlayerMovementV2 : MonoBehaviour
         if (horizontalMovement.x > 0)
         {
             gameObject.transform.localScale = Vector3.one;
+            playerCombat.isFacingRight = true;
         }
         else if (horizontalMovement.x < 0)
         {
             gameObject.transform.localScale = new Vector3(-1, 1, 1);
+            playerCombat.isFacingRight = false;
         }
     }
 

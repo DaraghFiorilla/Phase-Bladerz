@@ -123,8 +123,10 @@ MonoBehaviour:
   weaponChargeSlider: {fileID: 0}
   isInWeaponTrigger: 0
   weapon: {fileID: 0}
+  boomerangPrefab: {fileID: 4096353010808305674, guid: 033ea6c7dfefe0f4ab76c34f3d8f4435, type: 3}
   attack: {fileID: 0}
   isMiku: 0
+  isFacingRight: 0
 --- !u!212 &4859195827483654644
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -226,6 +228,21 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PlayerMovementV2, Assembly-CSharp
         m_MethodName: SetAttackingSpeed
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnBoomerang:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4179705348621997218}
+        m_TargetAssemblyTypeName: PlayerCombatV2, Assembly-CSharp
+        m_MethodName: BoomerangAttack
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

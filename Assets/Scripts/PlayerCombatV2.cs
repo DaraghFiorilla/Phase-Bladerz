@@ -28,11 +28,13 @@ public class PlayerCombatV2 : MonoBehaviour
     [Header("Weapon Variables:")]
     public bool weaponEquipped;
     [SerializeField] private int maxWeaponCharge;
-    private int weaponCharge;
+    public int weaponCharge;
     [SerializeField] private TextMeshProUGUI weaponText;
     [SerializeField] private Slider weaponChargeSlider;
     public bool isInWeaponTrigger;
     public GameObject weapon;
+    [SerializeField] private GameObject boomerangPrefab;
+    //[SerializeField] private float boomerangOffset;
 
     [Header("Other:")]
     private Rigidbody2D rb;
@@ -41,6 +43,7 @@ public class PlayerCombatV2 : MonoBehaviour
     [SerializeField] private InputActionReference attack;
     [SerializeField] private bool isMiku;
     private SimpleFlash hitFlash;
+    public bool isFacingRight;
 
     public enum WeaponType
     {
@@ -255,5 +258,27 @@ public class PlayerCombatV2 : MonoBehaviour
         yield return new WaitForSeconds(knockbackDelay);
         rb.velocity = Vector2.zero;
         playerMovement.knockbackActive = false;
+    }
+
+    public void BoomerangAttack()
+    {
+        GameObject boomerang = Instantiate(boomerangPrefab);
+        boomerang.transform.parent = gameObject.transform;
+        /*Vector2 startingPos = boomerang.transform.position;
+        if (isFacingRight)
+        {
+            Vector2 targetPos = new Vector2(startingPos.x + boomerangOffset, startingPos.y);
+            boomerang.transform.position = Vector2.MoveTowards(startingPos, targetPos, Time.deltaTime * 40);
+        }
+        else
+        {
+            Vector2 targetPos = new Vector2(startingPos.x - boomerangOffset, startingPos.y);
+            boomerang.transform.position = Vector2.MoveTowards(startingPos, targetPos, Time.deltaTime * 40);
+        }
+
+        while (boomerang != null)
+        {
+            boomerang.transform.Rotate(0, Time.deltaTime * 500, 0);
+        }*/
     }
 }
