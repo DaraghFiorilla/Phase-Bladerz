@@ -19,6 +19,7 @@ public class PlayerMovementV2 : MonoBehaviour
     [SerializeField] private AudioSource DoubleJumpSoundEffect;
     private bool jumped = false, doubleJumped = false;
     private Animator animator;
+    [SerializeField] private InputActionReference movement, jump;
     public bool knockbackActive;
     public bool attacking;
     private PlayerCombatV2 playerCombat;
@@ -34,7 +35,6 @@ public class PlayerMovementV2 : MonoBehaviour
 
     private void FixedUpdate()
     {
-
         /*if (horizontalMovement.magnitude > 0 && currentSpeed >= 0) // MOVEMENT SHIT - FUCKS WITH THE JUMP THOUGH
         {
             oldMovement = horizontalMovement;

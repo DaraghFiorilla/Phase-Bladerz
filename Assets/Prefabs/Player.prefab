@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4859195827483654645}
-  - component: {fileID: 1268690514159727733}
-  - component: {fileID: 2613416959096628499}
   - component: {fileID: 6982664302770443205}
   - component: {fileID: 1444052268716717839}
   - component: {fileID: 4179705348621997218}
@@ -44,30 +42,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1268690514159727733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4859195827483654642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72c630a1e1aafcd4f97b0530367842ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2613416959096628499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4859195827483654642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d86b2d76fe44c4f82515986d53fbeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6982664302770443205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,6 +63,8 @@ MonoBehaviour:
     m_Bits: 64
   JumpSoundEffect: {fileID: 0}
   DoubleJumpSoundEffect: {fileID: 0}
+  movement: {fileID: 0}
+  jump: {fileID: 0}
   knockbackActive: 0
   attacking: 0
 --- !u!114 &1444052268716717839
@@ -151,6 +127,7 @@ MonoBehaviour:
   boomerangPrefab: {fileID: 4096353010808305674, guid: 033ea6c7dfefe0f4ab76c34f3d8f4435, type: 3}
   boomerangActive: 0
   attack: {fileID: 0}
+  isMiku: 0
   isFacingRight: 0
 --- !u!212 &4859195827483654644
 SpriteRenderer:

@@ -90,8 +90,6 @@ public class PlayerCombatV2 : MonoBehaviour
             weaponChargeSlider.enabled = false;
             RemoveWeapon();
         }
-
-
     }
 
     public void OnAttack(InputAction.CallbackContext context)
@@ -211,11 +209,11 @@ public class PlayerCombatV2 : MonoBehaviour
         Debug.Log("Detect colliders run");
         foreach (Collider2D collider in Physics2D.OverlapCircleAll(raycastOrigin.position, radius))
         {
-            if (collider.CompareTag("Player2") && collider.gameObject != gameObject)
+            if (collider.CompareTag("Player") && collider.gameObject != gameObject)
             {
                 Debug.Log("Player hit");
                 HitSoundEffect.Play();
-                collider.gameObject.GetComponent<Player1Combat>().DamagePlayer(gameObject, attackPower);
+                collider.gameObject.GetComponent<PlayerCombatV2>().DamagePlayer(gameObject, attackPower);
                 weaponCharge--;
                 weaponChargeSlider.value = weaponCharge;
             }
