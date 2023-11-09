@@ -164,11 +164,6 @@
             "bindingGroup": "Player2",
             "devices": [
                 {
-                    "devicePath": "<Keyboard>",
-                    "isOptional": true,
-                    "isOR": false
-                },
-                {
                     "devicePath": "<Gamepad>",
                     "isOptional": false,
                     "isOR": false
